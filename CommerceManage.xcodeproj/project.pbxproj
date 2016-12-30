@@ -441,6 +441,7 @@
 		3AE793D01E1657BF005C4D34 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE793C31E1657BF005C4D34 /* SearchViewController.m */; };
 		3AE793D51E165869005C4D34 /* BusinessDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE793D21E165869005C4D34 /* BusinessDetailModel.m */; };
 		3AE793D61E165869005C4D34 /* NewsDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE793D41E165869005C4D34 /* NewsDetailModel.m */; };
+		3AE793DA1E165CE9005C4D34 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE793D91E165CE9005C4D34 /* UIView+Frame.m */; };
 		3AF3ED301E1607EA0010B68C /* BackBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF3ED2F1E1607EA0010B68C /* BackBaseViewController.m */; };
 		3AF3ED391E162EEF0010B68C /* SDBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF3ED331E162EEF0010B68C /* SDBrowserImageView.m */; };
 		3AF3ED3A1E162EEF0010B68C /* SDPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF3ED351E162EEF0010B68C /* SDPhotoBrowser.m */; };
@@ -1266,6 +1267,8 @@
 		3AE793D21E165869005C4D34 /* BusinessDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessDetailModel.m; sourceTree = "<group>"; };
 		3AE793D31E165869005C4D34 /* NewsDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailModel.h; sourceTree = "<group>"; };
 		3AE793D41E165869005C4D34 /* NewsDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailModel.m; sourceTree = "<group>"; };
+		3AE793D81E165CE9005C4D34 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		3AE793D91E165CE9005C4D34 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		3AF3ED2E1E1607EA0010B68C /* BackBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackBaseViewController.h; sourceTree = "<group>"; };
 		3AF3ED2F1E1607EA0010B68C /* BackBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackBaseViewController.m; sourceTree = "<group>"; };
 		3AF3ED321E162EEF0010B68C /* SDBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBrowserImageView.h; sourceTree = "<group>"; };
@@ -2499,6 +2502,7 @@
 		3A864E3E1E10AAAF001CEC7F /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				3AE793D71E165CE9005C4D34 /* UIView+Frame */,
 				3A051FA91E11F60900CEEEF0 /* 二维码 */,
 				3A864F1E1E10E5C1001CEC7F /* RSTFocusImage */,
 				3A864E401E10AB63001CEC7F /* LPPageVC */,
@@ -2849,6 +2853,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		3AE793D71E165CE9005C4D34 /* UIView+Frame */ = {
+			isa = PBXGroup;
+			children = (
+				3AE793D81E165CE9005C4D34 /* UIView+Frame.h */,
+				3AE793D91E165CE9005C4D34 /* UIView+Frame.m */,
+			);
+			path = "UIView+Frame";
+			sourceTree = "<group>";
+		};
 		3AF3ED311E162EEF0010B68C /* SDPhotoBrowser */ = {
 			isa = PBXGroup;
 			children = (
@@ -3139,6 +3152,7 @@
 				3A0522611E11F60900CEEEF0 /* ZXCode39Reader.m in Sources */,
 				3A864E6F1E10AD49001CEC7F /* NSArray+MASAdditions.m in Sources */,
 				3A05227C1E11F60A00CEEEF0 /* ZXPDF417BoundingBox.m in Sources */,
+				3AE793DA1E165CE9005C4D34 /* UIView+Frame.m in Sources */,
 				3AF3ED391E162EEF0010B68C /* SDBrowserImageView.m in Sources */,
 				3AE793C91E1657BF005C4D34 /* BannerModel.m in Sources */,
 				3A0521D51E11F60900CEEEF0 /* ZXAztecHighLevelEncoder.m in Sources */,

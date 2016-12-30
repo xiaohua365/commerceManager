@@ -68,9 +68,11 @@
     if (velocity <- 5) {
         //向上拖动，隐藏导航栏
         [self.navigationController setNavigationBarHidden:YES animated:YES];
+        self.webView.y = 20.0f;
     }else if (velocity > 5) {
         //向下拖动，显示导航栏
         [self.navigationController setNavigationBarHidden:NO animated:YES];
+        self.webView.y = .0f;
     }else if(velocity == 0){
         //停止拖拽
     }
@@ -227,7 +229,7 @@
 
 - (UIWebView *)webView {
     if (!_webView) {
-        _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, screenW, screenH)];
+        _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, screenW, screenH-20)];
         _webView.backgroundColor = [UIColor whiteColor];
         _webView.scrollView.backgroundColor = [UIColor whiteColor];
         _webView.scalesPageToFit = YES;
