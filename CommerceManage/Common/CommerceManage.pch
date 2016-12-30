@@ -1,0 +1,28 @@
+//
+//  CommerceManage.pch
+//  CommerceManage
+//
+//  Created by 小花 on 2016/12/26.
+//  Copyright © 2016年 vaic. All rights reserved.
+//
+
+#ifndef CommerceManage_pch
+#define CommerceManage_pch
+
+#import "PublicHeader.h"
+#import "Masonry.h"
+#import "AFNetworking.h"
+#import "UIImageView+WebCache.h"
+#import "MJExtension.h"
+#import "MJRefresh.h"
+
+#import "AccountTool.h"
+#import "CommonTool.h"
+#import "PublicFunction.h"
+#import "SVProgressHUD.h"
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* CommerceManage_pch */

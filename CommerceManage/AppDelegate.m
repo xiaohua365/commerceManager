@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "TabbarViewController.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,30 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    
+    //设置导航条颜色
+    if([UINavigationBar conformsToProtocol:@protocol(UIAppearanceContainer)]) {
+        [UINavigationBar appearance].tintColor = [UIColor blackColor];
+        //        [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:18], NSForegroundColorAttributeName : [UIColor whiteColor]}];
+        [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
+        [[UINavigationBar appearance] setTranslucent:NO];
+    }
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    if ([AccountTool isLogin]) {
+        TabbarViewController *CVC = [[TabbarViewController alloc]init];
+        self.window.rootViewController = CVC;
+    }else {
+        LoginViewController *login = [[LoginViewController alloc] init];
+        self.window.rootViewController = login;
+    }
+    
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
