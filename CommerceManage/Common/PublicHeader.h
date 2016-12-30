@@ -13,12 +13,12 @@
 #define screenH [[UIScreen mainScreen] bounds].size.height
 
         /**项目的IP*/
-#define URL_IP @"http://172.16.10.15:9300/"  //内网IP
-//#define URL_IP @"http://59.108.94.40:9100/"  //外网IP
+//#define URL_IP @"http://172.16.10.15:9300/"  //内网IP
+#define URL_IP @"http://59.108.94.40:9100/"  //外网IP
 
         /**图片的IP*/
-#define URL_IP_IMG @"http://172.16.10.15:9300/" //内网图片
-//#define URL_IP_IMG @"http://59.108.94.40:9100/" //外网图片
+//#define URL_IP_IMG @"http://172.16.10.15:9300/" //内网图片
+#define URL_IP_IMG @"http://59.108.94.40:9100/" //外网图片
 
         /**项目名称*/
 #define PROJECT_NAME @"gsl-api"        //内网
