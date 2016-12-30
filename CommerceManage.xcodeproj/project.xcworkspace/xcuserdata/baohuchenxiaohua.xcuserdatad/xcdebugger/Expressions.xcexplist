@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[NewsDetailViewController getImagesJSFunction]:NewsDetailViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.imageArr">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LoginViewController saveUserInfoWith:]:LoginViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[AssociationViewController tableView:didSelectRowAtIndexPath:]:AssociationViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[LoginViewController loginManager]:LoginViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[NewsDetailViewController loadNewsDetailData]:NewsDetailViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__46-[NewsDetailViewController loadNewsDetailData]_block_invoke:NewsDetailViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "+[AccountTool isLogin]:AccountTool.m">
+      </ContextState>
+      <ContextState
+         contextName = "__42-[MessageViewController loadTableViewData]_block_invoke:MessageViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.dataArr">
+            </PersistentString>
+            <PersistentString
+               value = "para">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MessageViewController tableView:cellForRowAtIndexPath:]:MessageViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.dataArr">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[RSTFocusImage loadImage]:RSTFocusImage.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_imageUrl">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ChangeInfoViewController account]:ChangeInfoViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_uersData">
+            </PersistentString>
+            <PersistentString
+               value = "_account">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
