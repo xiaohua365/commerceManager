@@ -10,6 +10,7 @@
 #import "BusinessDetailModel.h"
 #import "SDPhotoBrowser.h"
 #import <WebKit/WebKit.h>
+#import "WeakScriptMessageDelegate.h"
 
 @interface BusinessWKViewController ()<WKNavigationDelegate, WKScriptMessageHandler, WKUIDelegate, SDPhotoBrowserDelegate, UIScrollViewDelegate>
 @property (nonatomic, strong) WKWebView *webView;
@@ -27,6 +28,7 @@
     self.title = @"商业详情";
     [self getTapImageUrl];
     [self getAllImageUrl];
+    [self webViewAddJSScript];
     
     [self.view addSubview:self.webView];
     [self loadBusinessDetailData];
@@ -191,8 +193,7 @@
     WKWebViewConfiguration *config = self.webView.configuration;
     
     [config.userContentController addUserScript:funScript];
-    [self.webView.configuration.userContentController addScriptMessageHandler:self name:@"getImageUrl"];
-    [self.webView.configuration.userContentController addScriptMessageHandler:self name:@"getImages"];
+    
     
 }
 
@@ -214,6 +215,12 @@
     
     [self.webView.configuration.userContentController addUserScript:jsScript];//注入js方法
     
+}
+
+#pragma mark - webView addScript
+- (void)webViewAddJSScript {
+    [self.webView.configuration.userContentController addScriptMessageHandler:[[WeakScriptMessageDelegate alloc] initWithDelegate:self] name:@"getImageUrl"];
+    [self.webView.configuration.userContentController addScriptMessageHandler:[[WeakScriptMessageDelegate alloc] initWithDelegate:self] name:@"getImages"];
 }
 
 
@@ -252,6 +259,11 @@
     return _imageArr;
 }
 
+
+- (void)dealloc {
+    [[self.webView configuration].userContentController removeScriptMessageHandlerForName:@"getImageUrl"];
+    [[self.webView configuration].userContentController removeScriptMessageHandlerForName:@"getImages"];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

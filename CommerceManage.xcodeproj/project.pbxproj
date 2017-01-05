@@ -277,6 +277,10 @@
 		3A0AE1C11E1E2514006BCD64 /* jquery-1.10.2.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 3A0AE1BC1E1E2514006BCD64 /* jquery-1.10.2.min.js */; };
 		3A0AE1C21E1E2514006BCD64 /* news_detail.css in Resources */ = {isa = PBXBuildFile; fileRef = 3A0AE1BD1E1E2514006BCD64 /* news_detail.css */; };
 		3A0AE1C31E1E2514006BCD64 /* news_detail.html in Resources */ = {isa = PBXBuildFile; fileRef = 3A0AE1BE1E1E2514006BCD64 /* news_detail.html */; };
+		3A0AE1C61E1E2706006BCD64 /* WeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0AE1C51E1E2706006BCD64 /* WeakScriptMessageDelegate.m */; };
+		3A0AE1CF1E1E320E006BCD64 /* IMYWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0AE1C91E1E320E006BCD64 /* IMYWebView.m */; };
+		3A0AE1D01E1E320E006BCD64 /* IMY_NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0AE1CC1E1E320E006BCD64 /* IMY_NJKWebViewProgress.m */; };
+		3A0AE1D11E1E320E006BCD64 /* WYWeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0AE1CE1E1E320E006BCD64 /* WYWeakScriptMessageDelegate.m */; };
 		3A11F1D51E13579C00BBA7E0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A11F1BF1E13579C00BBA7E0 /* Info.plist */; };
 		3A11F1D61E13579C00BBA7E0 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A11F1C21E13579C00BBA7E0 /* MJExtensionConst.m */; };
 		3A11F1D71E13579C00BBA7E0 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A11F1C41E13579C00BBA7E0 /* MJFoundation.m */; };
@@ -1000,6 +1004,14 @@
 		3A0AE1BC1E1E2514006BCD64 /* jquery-1.10.2.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-1.10.2.min.js"; sourceTree = "<group>"; };
 		3A0AE1BD1E1E2514006BCD64 /* news_detail.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = news_detail.css; sourceTree = "<group>"; };
 		3A0AE1BE1E1E2514006BCD64 /* news_detail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = news_detail.html; sourceTree = "<group>"; };
+		3A0AE1C41E1E2706006BCD64 /* WeakScriptMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeakScriptMessageDelegate.h; sourceTree = "<group>"; };
+		3A0AE1C51E1E2706006BCD64 /* WeakScriptMessageDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeakScriptMessageDelegate.m; sourceTree = "<group>"; };
+		3A0AE1C81E1E320E006BCD64 /* IMYWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMYWebView.h; sourceTree = "<group>"; };
+		3A0AE1C91E1E320E006BCD64 /* IMYWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMYWebView.m; sourceTree = "<group>"; };
+		3A0AE1CB1E1E320E006BCD64 /* IMY_NJKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMY_NJKWebViewProgress.h; sourceTree = "<group>"; };
+		3A0AE1CC1E1E320E006BCD64 /* IMY_NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMY_NJKWebViewProgress.m; sourceTree = "<group>"; };
+		3A0AE1CD1E1E320E006BCD64 /* WYWeakScriptMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYWeakScriptMessageDelegate.h; sourceTree = "<group>"; };
+		3A0AE1CE1E1E320E006BCD64 /* WYWeakScriptMessageDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWeakScriptMessageDelegate.m; sourceTree = "<group>"; };
 		3A11F1BF1E13579C00BBA7E0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A11F1C01E13579C00BBA7E0 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
 		3A11F1C11E13579C00BBA7E0 /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
@@ -2173,6 +2185,8 @@
 				3A09FB301E1CF2EC00A359A7 /* NewsWKViewController.m */,
 				3A0AE1B31E1E1ECA006BCD64 /* BusinessWKViewController.h */,
 				3A0AE1B41E1E1ECA006BCD64 /* BusinessWKViewController.m */,
+				3A0AE1C41E1E2706006BCD64 /* WeakScriptMessageDelegate.h */,
+				3A0AE1C51E1E2706006BCD64 /* WeakScriptMessageDelegate.m */,
 			);
 			path = WKWebView;
 			sourceTree = "<group>";
@@ -2195,6 +2209,27 @@
 				3A0AE1BC1E1E2514006BCD64 /* jquery-1.10.2.min.js */,
 			);
 			path = business_html;
+			sourceTree = "<group>";
+		};
+		3A0AE1C71E1E320E006BCD64 /* IMYWebView */ = {
+			isa = PBXGroup;
+			children = (
+				3A0AE1C81E1E320E006BCD64 /* IMYWebView.h */,
+				3A0AE1C91E1E320E006BCD64 /* IMYWebView.m */,
+				3A0AE1CA1E1E320E006BCD64 /* UIWebViewProgress */,
+				3A0AE1CD1E1E320E006BCD64 /* WYWeakScriptMessageDelegate.h */,
+				3A0AE1CE1E1E320E006BCD64 /* WYWeakScriptMessageDelegate.m */,
+			);
+			path = IMYWebView;
+			sourceTree = "<group>";
+		};
+		3A0AE1CA1E1E320E006BCD64 /* UIWebViewProgress */ = {
+			isa = PBXGroup;
+			children = (
+				3A0AE1CB1E1E320E006BCD64 /* IMY_NJKWebViewProgress.h */,
+				3A0AE1CC1E1E320E006BCD64 /* IMY_NJKWebViewProgress.m */,
+			);
+			path = UIWebViewProgress;
 			sourceTree = "<group>";
 		};
 		3A11F1BE1E13579C00BBA7E0 /* MJExtension */ = {
@@ -2513,6 +2548,7 @@
 		3A864DF71E10A959001CEC7F /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				3A0AE1C71E1E320E006BCD64 /* IMYWebView */,
 				3A0AE1B81E1E2514006BCD64 /* html */,
 				3AF3ED311E162EEF0010B68C /* SDPhotoBrowser */,
 				3A11F1BE1E13579C00BBA7E0 /* MJExtension */,
@@ -3163,6 +3199,7 @@
 				3A0522631E11F60900CEEEF0 /* ZXCode93Reader.m in Sources */,
 				3A864ED81E10B0F7001CEC7F /* UIView+MJExtension.m in Sources */,
 				3A05225C1E11F60900CEEEF0 /* ZXRSSUtils.m in Sources */,
+				3A0AE1D11E1E320E006BCD64 /* WYWeakScriptMessageDelegate.m in Sources */,
 				3A864EC91E10B0F7001CEC7F /* MJRefreshFooter.m in Sources */,
 				3A0522041E11F60900CEEEF0 /* ZXMonochromeRectangleDetector.m in Sources */,
 				3A05220A1E11F60900CEEEF0 /* ZXBitArray.m in Sources */,
@@ -3241,6 +3278,7 @@
 				3A864EFD1E10B0FF001CEC7F /* NSData+ImageContentType.m in Sources */,
 				3A05225F1E11F60900CEEEF0 /* ZXCode128Reader.m in Sources */,
 				3A864ED91E10B0F7001CEC7F /* README.md in Sources */,
+				3A0AE1C61E1E2706006BCD64 /* WeakScriptMessageDelegate.m in Sources */,
 				3AE793CE1E1657BF005C4D34 /* MeetResultController.m in Sources */,
 				3AF3ED301E1607EA0010B68C /* BackBaseViewController.m in Sources */,
 				3A0521E21E11F60900CEEEF0 /* ZXCalendarParsedResult.m in Sources */,
@@ -3273,6 +3311,7 @@
 				3A0522AA1E11F60A00CEEEF0 /* ZXMultiFormatReader.m in Sources */,
 				3A0522CD1E120EB100CEEEF0 /* AccountTool.m in Sources */,
 				3A05221F1E11F60900CEEEF0 /* ZXErrors.m in Sources */,
+				3A0AE1D01E1E320E006BCD64 /* IMY_NJKWebViewProgress.m in Sources */,
 				3A864E6C1E10AD49001CEC7F /* MASLayoutConstraint.m in Sources */,
 				3A864E691E10AD49001CEC7F /* MASCompositeConstraint.m in Sources */,
 				3A0522161E11F60900CEEEF0 /* ZXIntArray.m in Sources */,
@@ -3360,6 +3399,7 @@
 				3A05223B1E11F60900CEEEF0 /* ZXMaxiCodeDecodedBitStreamParser.m in Sources */,
 				3A05222E1E11F60900CEEEF0 /* ZXDataMatrixC40Encoder.m in Sources */,
 				3A0521FA1E11F60900CEEEF0 /* ZXVCardResultParser.m in Sources */,
+				3A0AE1CF1E1E320E006BCD64 /* IMYWebView.m in Sources */,
 				3A0522311E11F60900CEEEF0 /* ZXDataMatrixEncoderContext.m in Sources */,
 				3A0522091E11F60900CEEEF0 /* ZXReedSolomonEncoder.m in Sources */,
 				3A0521DB1E11F60900CEEEF0 /* ZXAztecWriter.m in Sources */,

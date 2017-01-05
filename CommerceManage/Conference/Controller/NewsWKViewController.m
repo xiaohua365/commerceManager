@@ -10,6 +10,7 @@
 #import <WebKit/WebKit.h>
 #import "NewsDetailModel.h"
 #import "SDPhotoBrowser.h"
+#import "WeakScriptMessageDelegate.h"
 
 @interface NewsWKViewController ()<WKNavigationDelegate, WKScriptMessageHandler, WKUIDelegate, SDPhotoBrowserDelegate, UIScrollViewDelegate>
 @property (nonatomic, strong) WKWebView *webView;
@@ -28,6 +29,7 @@
     
     [self getTapImageUrl];
     [self getAllImageUrl];
+    [self webViewAddJSScript];
     
     [self.view addSubview:self.webView];
     [self loadNewsDetailData];
@@ -170,8 +172,7 @@
     WKWebViewConfiguration *config = self.webView.configuration;
     
     [config.userContentController addUserScript:funScript];
-    [self.webView.configuration.userContentController addScriptMessageHandler:self name:@"getImageUrl"];
-    [self.webView.configuration.userContentController addScriptMessageHandler:self name:@"getImages"];
+    
     
 }
 
@@ -194,6 +195,13 @@
     [self.webView.configuration.userContentController addUserScript:jsScript];//注入js方法
 
 }
+
+#pragma mark - webView addScript
+- (void)webViewAddJSScript {
+    [self.webView.configuration.userContentController addScriptMessageHandler:[[WeakScriptMessageDelegate alloc] initWithDelegate:self] name:@"getImageUrl"];
+    [self.webView.configuration.userContentController addScriptMessageHandler:[[WeakScriptMessageDelegate alloc] initWithDelegate:self] name:@"getImages"];
+}
+
 
 #pragma -mark 加载本地html模板
 - (NSURLRequest *) getHtmlURL
@@ -260,6 +268,11 @@
         _imageArr = [NSMutableArray array];
     }
     return _imageArr;
+}
+
+- (void)dealloc {
+    [[self.webView configuration].userContentController removeScriptMessageHandlerForName:@"getImageUrl"];
+    [[self.webView configuration].userContentController removeScriptMessageHandlerForName:@"getImages"];
 }
 
 
