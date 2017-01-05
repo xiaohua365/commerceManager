@@ -13,7 +13,7 @@
 #import "TableHeaderView.h"
 #import "BannerModel.h"
 #import "MessageNewsModel.h"
-#import "NewsDetailViewController.h"
+#import "NewsWKViewController.h"
 
 static const NSString *numPerPage = @"6";
 
@@ -226,7 +226,7 @@ static const NSString *numPerPage = @"6";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NewsDetailViewController *detail = [[NewsDetailViewController alloc] init];
+    NewsWKViewController *detail = [[NewsWKViewController alloc] init];
     MessageNewsModel *model = self.dataArr[indexPath.row];
     detail.newsID = model.ID;
     
@@ -241,13 +241,15 @@ static const NSString *numPerPage = @"6";
 
 - (void)tapFocusWithIndex:(NSInteger)index {
    
-    NewsDetailViewController *detail = [[NewsDetailViewController alloc] init];
+    NewsWKViewController *detail = [[NewsWKViewController alloc] init];
     BannerModel *model = self.bannerData[index];
     detail.newsID = model.ID;
     
     self.navigationController.viewControllers[0].hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:detail animated:YES];
     self.navigationController.viewControllers[0].hidesBottomBarWhenPushed = NO;
+    
+    
     
     
 }

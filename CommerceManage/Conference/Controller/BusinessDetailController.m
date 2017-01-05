@@ -155,9 +155,9 @@
     
     [self.webView stringByEvaluatingJavaScriptFromString:CCGetImages];//注入js方法
     
-    //注入自定义的js方法后别忘了调用 否则不会生效（不调用也一样生效了，，，不明白）
+//    注入自定义的js方法后别忘了调用 否则不会生效
     NSString *resurlt = [self.webView stringByEvaluatingJavaScriptFromString:@"getImages()"];
-    //调用js方法
+//    调用js方法
     NSLog(@"---调用js方法--%@  %s  jsMehtods_result = %@",self.class,__func__,resurlt);
 }
 

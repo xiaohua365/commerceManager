@@ -8,7 +8,6 @@
 
 #import "ConferenceViewController.h"
 #import "ConferenceCell.h"
-#import "NewsDetailViewController.h"
 #import "SearchViewController.h"
 #import "ConferenceModel.h"
 
@@ -170,11 +169,6 @@ static const NSString *numPerPage = @"6";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
-//    NewsDetailViewController *news = [[NewsDetailViewController alloc] init];
-//    
-//    self.hidesBottomBarWhenPushed = YES;
-//    [self.navigationController pushViewController:news animated:YES];
-//    self.hidesBottomBarWhenPushed = NO;
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

@@ -160,11 +160,7 @@ static const NSString *numPerPage = @"100";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
-    //    NewsDetailViewController *news = [[NewsDetailViewController alloc] init];
-    //
-    //    self.hidesBottomBarWhenPushed = YES;
-    //    [self.navigationController pushViewController:news animated:YES];
-    //    self.hidesBottomBarWhenPushed = NO;
+
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

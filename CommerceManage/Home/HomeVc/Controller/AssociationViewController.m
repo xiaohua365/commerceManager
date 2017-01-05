@@ -8,7 +8,7 @@
 
 #import "AssociationViewController.h"
 #import "MessageTableCell.h"
-#import "BusinessDetailController.h"
+#import "BusinessWKViewController.h"
 
 @interface AssociationViewController ()<UITableViewDelegate, UITableViewDataSource> {
     NSInteger _pageNum;
@@ -111,7 +111,7 @@ static const NSString *numPerPage = @"6";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
  
     MessageNewsModel *model = self.dataArr[indexPath.row];
-    BusinessDetailController *detail = [[BusinessDetailController alloc] init];
+    BusinessWKViewController *detail = [[BusinessWKViewController alloc] init];
     detail.businessID = model.ID;
     
     self.navigationController.viewControllers[0].hidesBottomBarWhenPushed = YES;

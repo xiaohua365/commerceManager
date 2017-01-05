@@ -9,8 +9,9 @@
 #import "NewsResultController.h"
 #import "MessageNewsModel.h"
 #import "MessageTableCell.h"
-#import "NewsDetailViewController.h"
-#import "BusinessDetailController.h"
+#import "NewsWKViewController.h"
+#import "BusinessWKViewController.h"
+
 
 typedef enum : NSUInteger {
     newsSearch,
@@ -137,14 +138,14 @@ static const NSString *numPerPage = @"100";
     MessageNewsModel *model = self.dataArr[indexPath.row];
     
     if (self.searchType == newsSearch) {
-        NewsDetailViewController *news = [[NewsDetailViewController alloc] init];
+        NewsWKViewController *news = [[NewsWKViewController alloc] init];
         news.newsID = model.ID;
         self.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:news animated:YES];
     }
     
     if (self.searchType == businessSearch) {
-        BusinessDetailController *business = [[BusinessDetailController alloc] init];
+        BusinessWKViewController *business = [[BusinessWKViewController alloc] init];
         business.businessID = model.ID;
         self.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:business animated:YES];

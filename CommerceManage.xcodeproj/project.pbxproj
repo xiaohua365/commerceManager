@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A01ABA51E14B7B10088478C /* business_detail.css in Resources */ = {isa = PBXBuildFile; fileRef = 3A01ABA21E14B7B10088478C /* business_detail.css */; };
-		3A01ABA61E14B7B10088478C /* business_detail.html in Resources */ = {isa = PBXBuildFile; fileRef = 3A01ABA31E14B7B10088478C /* business_detail.html */; };
-		3A01ABA71E14B7B10088478C /* jquery-1.10.2.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 3A01ABA41E14B7B10088478C /* jquery-1.10.2.min.js */; };
 		3A01ABAA1E14B7DB0088478C /* BusinessDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A01ABA91E14B7DB0088478C /* BusinessDetailController.m */; };
 		3A0521BB1E11F60900CEEEF0 /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3A051FAA1E11F60900CEEEF0 /* CodeScan.bundle */; };
 		3A0521BC1E11F60900CEEEF0 /* LBXScanLineAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A051FAE1E11F60900CEEEF0 /* LBXScanLineAnimation.m */; };
@@ -263,8 +260,6 @@
 		3A0522CD1E120EB100CEEEF0 /* AccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0522CC1E120EB100CEEEF0 /* AccountTool.m */; };
 		3A0522D11E1211DB00CEEEF0 /* CommonTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0522D01E1211DB00CEEEF0 /* CommonTool.m */; };
 		3A0522D41E123E8400CEEEF0 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0522D31E123E8400CEEEF0 /* NewsDetailViewController.m */; };
-		3A0522D81E123FBB00CEEEF0 /* news_detail.css in Resources */ = {isa = PBXBuildFile; fileRef = 3A0522D61E123FBB00CEEEF0 /* news_detail.css */; };
-		3A0522D91E123FBB00CEEEF0 /* news_detail.html in Resources */ = {isa = PBXBuildFile; fileRef = 3A0522D71E123FBB00CEEEF0 /* news_detail.html */; };
 		3A0522DF1E125A4200CEEEF0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0522DE1E125A4200CEEEF0 /* LoginViewController.m */; };
 		3A0522EA1E125B5800CEEEF0 /* login_page_button_login.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0522E11E125B5800CEEEF0 /* login_page_button_login.png */; };
 		3A0522EB1E125B5800CEEEF0 /* login_page_button_login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0522E21E125B5800CEEEF0 /* login_page_button_login@2x.png */; };
@@ -275,6 +270,8 @@
 		3A0522F41E12661800CEEEF0 /* 欢迎页.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0522F31E12661800CEEEF0 /* 欢迎页.png */; };
 		3A0522FA1E1269BE00CEEEF0 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3A0522F71E1269BE00CEEEF0 /* SVProgressHUD.bundle */; };
 		3A0522FB1E1269BE00CEEEF0 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0522F91E1269BE00CEEEF0 /* SVProgressHUD.m */; };
+		3A09FB311E1CF2EC00A359A7 /* NewsWKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A09FB301E1CF2EC00A359A7 /* NewsWKViewController.m */; };
+		3A0AE1B51E1E1ECA006BCD64 /* BusinessWKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0AE1B41E1E1ECA006BCD64 /* BusinessWKViewController.m */; };
 		3A11F1D51E13579C00BBA7E0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A11F1BF1E13579C00BBA7E0 /* Info.plist */; };
 		3A11F1D61E13579C00BBA7E0 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A11F1C21E13579C00BBA7E0 /* MJExtensionConst.m */; };
 		3A11F1D71E13579C00BBA7E0 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A11F1C41E13579C00BBA7E0 /* MJFoundation.m */; };
@@ -466,11 +463,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3A01ABA21E14B7B10088478C /* business_detail.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = business_detail.css; sourceTree = "<group>"; };
-		3A01ABA31E14B7B10088478C /* business_detail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = business_detail.html; sourceTree = "<group>"; };
-		3A01ABA41E14B7B10088478C /* jquery-1.10.2.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-1.10.2.min.js"; sourceTree = "<group>"; };
-		3A01ABA81E14B7DB0088478C /* BusinessDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessDetailController.h; sourceTree = "<group>"; };
-		3A01ABA91E14B7DB0088478C /* BusinessDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessDetailController.m; sourceTree = "<group>"; };
+		3A01ABA81E14B7DB0088478C /* BusinessDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BusinessDetailController.h; path = ../BusinessDetailController.h; sourceTree = "<group>"; };
+		3A01ABA91E14B7DB0088478C /* BusinessDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BusinessDetailController.m; path = ../BusinessDetailController.m; sourceTree = "<group>"; };
 		3A051FAA1E11F60900CEEEF0 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
 		3A051FAD1E11F60900CEEEF0 /* LBXScanLineAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanLineAnimation.h; sourceTree = "<group>"; };
 		3A051FAE1E11F60900CEEEF0 /* LBXScanLineAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanLineAnimation.m; sourceTree = "<group>"; };
@@ -977,10 +971,8 @@
 		3A0522CC1E120EB100CEEEF0 /* AccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTool.m; sourceTree = "<group>"; };
 		3A0522CF1E1211DB00CEEEF0 /* CommonTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTool.h; sourceTree = "<group>"; };
 		3A0522D01E1211DB00CEEEF0 /* CommonTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTool.m; sourceTree = "<group>"; };
-		3A0522D21E123E8400CEEEF0 /* NewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
-		3A0522D31E123E8400CEEEF0 /* NewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
-		3A0522D61E123FBB00CEEEF0 /* news_detail.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = news_detail.css; sourceTree = "<group>"; };
-		3A0522D71E123FBB00CEEEF0 /* news_detail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = news_detail.html; sourceTree = "<group>"; };
+		3A0522D21E123E8400CEEEF0 /* NewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsDetailViewController.h; path = ../NewsDetailViewController.h; sourceTree = "<group>"; };
+		3A0522D31E123E8400CEEEF0 /* NewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsDetailViewController.m; path = ../NewsDetailViewController.m; sourceTree = "<group>"; };
 		3A0522DD1E125A4200CEEEF0 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		3A0522DE1E125A4200CEEEF0 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		3A0522E11E125B5800CEEEF0 /* login_page_button_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_page_button_login.png; sourceTree = "<group>"; };
@@ -994,6 +986,10 @@
 		3A0522F71E1269BE00CEEEF0 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		3A0522F81E1269BE00CEEEF0 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		3A0522F91E1269BE00CEEEF0 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		3A09FB2F1E1CF2EC00A359A7 /* NewsWKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsWKViewController.h; path = ../NewsWKViewController.h; sourceTree = "<group>"; };
+		3A09FB301E1CF2EC00A359A7 /* NewsWKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsWKViewController.m; path = ../NewsWKViewController.m; sourceTree = "<group>"; };
+		3A0AE1B31E1E1ECA006BCD64 /* BusinessWKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BusinessWKViewController.h; path = ../BusinessWKViewController.h; sourceTree = "<group>"; };
+		3A0AE1B41E1E1ECA006BCD64 /* BusinessWKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BusinessWKViewController.m; path = ../BusinessWKViewController.m; sourceTree = "<group>"; };
 		3A11F1BF1E13579C00BBA7E0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A11F1C01E13579C00BBA7E0 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
 		3A11F1C11E13579C00BBA7E0 /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
@@ -1305,16 +1301,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3A01ABA11E14B7B10088478C /* business_html */ = {
-			isa = PBXGroup;
-			children = (
-				3A01ABA21E14B7B10088478C /* business_detail.css */,
-				3A01ABA31E14B7B10088478C /* business_detail.html */,
-				3A01ABA41E14B7B10088478C /* jquery-1.10.2.min.js */,
-			);
-			path = business_html;
-			sourceTree = "<group>";
-		};
 		3A051FA91E11F60900CEEEF0 /* 二维码 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2125,16 +2111,6 @@
 			path = CommonTool;
 			sourceTree = "<group>";
 		};
-		3A0522D51E123FBB00CEEEF0 /* html */ = {
-			isa = PBXGroup;
-			children = (
-				3A01ABA11E14B7B10088478C /* business_html */,
-				3A0522D61E123FBB00CEEEF0 /* news_detail.css */,
-				3A0522D71E123FBB00CEEEF0 /* news_detail.html */,
-			);
-			path = html;
-			sourceTree = "<group>";
-		};
 		3A0522DC1E125A2F00CEEEF0 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -2167,6 +2143,28 @@
 				3A0522F91E1269BE00CEEEF0 /* SVProgressHUD.m */,
 			);
 			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		3A0AE1B61E1E221E006BCD64 /* UIWebView */ = {
+			isa = PBXGroup;
+			children = (
+				3A0522D21E123E8400CEEEF0 /* NewsDetailViewController.h */,
+				3A0522D31E123E8400CEEEF0 /* NewsDetailViewController.m */,
+				3A01ABA81E14B7DB0088478C /* BusinessDetailController.h */,
+				3A01ABA91E14B7DB0088478C /* BusinessDetailController.m */,
+			);
+			path = UIWebView;
+			sourceTree = "<group>";
+		};
+		3A0AE1B71E1E222A006BCD64 /* WKWebView */ = {
+			isa = PBXGroup;
+			children = (
+				3A09FB2F1E1CF2EC00A359A7 /* NewsWKViewController.h */,
+				3A09FB301E1CF2EC00A359A7 /* NewsWKViewController.m */,
+				3A0AE1B31E1E1ECA006BCD64 /* BusinessWKViewController.h */,
+				3A0AE1B41E1E1ECA006BCD64 /* BusinessWKViewController.m */,
+			);
+			path = WKWebView;
 			sourceTree = "<group>";
 		};
 		3A11F1BE1E13579C00BBA7E0 /* MJExtension */ = {
@@ -2327,10 +2325,8 @@
 			children = (
 				3A864DEA1E10A7C4001CEC7F /* ConferenceViewController.h */,
 				3A864DEB1E10A7C4001CEC7F /* ConferenceViewController.m */,
-				3A0522D21E123E8400CEEEF0 /* NewsDetailViewController.h */,
-				3A0522D31E123E8400CEEEF0 /* NewsDetailViewController.m */,
-				3A01ABA81E14B7DB0088478C /* BusinessDetailController.h */,
-				3A01ABA91E14B7DB0088478C /* BusinessDetailController.m */,
+				3A0AE1B61E1E221E006BCD64 /* UIWebView */,
+				3A0AE1B71E1E222A006BCD64 /* WKWebView */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2490,7 +2486,6 @@
 				3AF3ED311E162EEF0010B68C /* SDPhotoBrowser */,
 				3A11F1BE1E13579C00BBA7E0 /* MJExtension */,
 				3A0522F51E1269BE00CEEEF0 /* SVProgressHUD */,
-				3A0522D51E123FBB00CEEEF0 /* html */,
 				3A864EDA1E10B0FF001CEC7F /* SDWebImage */,
 				3A864E951E10B0F7001CEC7F /* MJRefresh */,
 				3A864E811E10B0E9001CEC7F /* AFNetworking */,
@@ -2784,12 +2779,12 @@
 		3AE793A71E1657BF005C4D34 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3AE793AC1E1657BF005C4D34 /* HomeViewController.h */,
+				3AE793AD1E1657BF005C4D34 /* HomeViewController.m */,
 				3AE793A81E1657BF005C4D34 /* AreaViewController.h */,
 				3AE793A91E1657BF005C4D34 /* AreaViewController.m */,
 				3AE793AA1E1657BF005C4D34 /* AssociationViewController.h */,
 				3AE793AB1E1657BF005C4D34 /* AssociationViewController.m */,
-				3AE793AC1E1657BF005C4D34 /* HomeViewController.h */,
-				3AE793AD1E1657BF005C4D34 /* HomeViewController.m */,
 				3AE793AE1E1657BF005C4D34 /* MessageViewController.h */,
 				3AE793AF1E1657BF005C4D34 /* MessageViewController.m */,
 			);
@@ -3009,15 +3004,12 @@
 				3A864E341E10A9AE001CEC7F /* tab_home@3x.png in Resources */,
 				3A0521CC1E11F60900CEEEF0 /* ScanResultViewController.xib in Resources */,
 				3A864E7E1E10B08C001CEC7F /* icon_gexinghua.png in Resources */,
-				3A01ABA71E14B7B10088478C /* jquery-1.10.2.min.js in Resources */,
 				3A864DB01E10A3E0001CEC7F /* LaunchScreen.storyboard in Resources */,
-				3A01ABA61E14B7B10088478C /* business_detail.html in Resources */,
 				3A864F481E110F63001CEC7F /* button_parted.png in Resources */,
 				3A864E361E10A9AE001CEC7F /* tab_mine_nor@2x.png in Resources */,
 				3A0522F41E12661800CEEEF0 /* 欢迎页.png in Resources */,
 				3A0522ED1E125B5800CEEEF0 /* login_page_img_logo.png in Resources */,
 				3A864F461E110F63001CEC7F /* button_part@2x.png in Resources */,
-				3A0522D91E123FBB00CEEEF0 /* news_detail.html in Resources */,
 				3A0521C81E11F60900CEEEF0 /* logo.JPG in Resources */,
 				3A864F4F1E1114DE001CEC7F /* personal_page_logo.png in Resources */,
 				3A864F4A1E110F63001CEC7F /* button_parted@3x.png in Resources */,
@@ -3037,7 +3029,6 @@
 				3A5FCC4D1E13C0D700E5DB78 /* page_icon_arrow_back@2x.png in Resources */,
 				3A864E2C1E10A9AE001CEC7F /* tab_contacts.png in Resources */,
 				3A864E281E10A9AE001CEC7F /* tab_business@3x.png in Resources */,
-				3A01ABA51E14B7B10088478C /* business_detail.css in Resources */,
 				3A5FCC4B1E13C0D700E5DB78 /* change_password_page_button_save@3x.png in Resources */,
 				3A864E3B1E10A9AE001CEC7F /* top_logo.png in Resources */,
 				3A864E2E1E10A9AE001CEC7F /* tab_contacts@3x.png in Resources */,
@@ -3074,7 +3065,6 @@
 				3A864F171E10B4D7001CEC7F /* icon_scan@3x.png in Resources */,
 				3A864E311E10A9AE001CEC7F /* tab_home_nor@3x.png in Resources */,
 				3A5FCC4E1E13C0D700E5DB78 /* page_icon_arrow_back@3x.png in Resources */,
-				3A0522D81E123FBB00CEEEF0 /* news_detail.css in Resources */,
 				3A864DAB1E10A3E0001CEC7F /* Main.storyboard in Resources */,
 				3A864E791E10B06A001CEC7F /* img_projection@2x.png in Resources */,
 				3A864E371E10A9AE001CEC7F /* tab_mine_nor@3x.png in Resources */,
@@ -3368,6 +3358,7 @@
 				3A0522391E11F60900CEEEF0 /* ZXDataMatrixWriter.m in Sources */,
 				3A864ECC1E10B0F7001CEC7F /* MJRefreshAutoNormalFooter.m in Sources */,
 				3A0521ED1E11F60900CEEEF0 /* ZXProductParsedResult.m in Sources */,
+				3A0AE1B51E1E1ECA006BCD64 /* BusinessWKViewController.m in Sources */,
 				3A0521CF1E11F60900CEEEF0 /* README.md in Sources */,
 				3A05221B1E11F60900CEEEF0 /* ZXByteMatrix.m in Sources */,
 				3A864ECE1E10B0F7001CEC7F /* MJRefreshBackGifFooter.m in Sources */,
@@ -3378,6 +3369,7 @@
 				3A864F021E10B0FF001CEC7F /* SDWebImageDownloaderOperation.m in Sources */,
 				3A0522951E11F60A00CEEEF0 /* ZXQRCodeDecoderMetaData.m in Sources */,
 				3A0522661E11F60900CEEEF0 /* ZXEAN8Reader.m in Sources */,
+				3A09FB311E1CF2EC00A359A7 /* NewsWKViewController.m in Sources */,
 				3A01ABAA1E14B7DB0088478C /* BusinessDetailController.m in Sources */,
 				3A0521D11E11F60900CEEEF0 /* ZXAztecDetector.m in Sources */,
 				3A0521F91E11F60900CEEEF0 /* ZXURLTOResultParser.m in Sources */,
@@ -3595,6 +3587,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CommerceManage/Common/CommerceManage.pch";
 				INFOPLIST_FILE = CommerceManage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Vaic.CommerceManage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3610,6 +3603,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CommerceManage/Common/CommerceManage.pch";
 				INFOPLIST_FILE = CommerceManage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Vaic.CommerceManage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
