@@ -24,6 +24,7 @@
     [super viewDidLoad];
     
     self.tabBar.barTintColor = [UIColor whiteColor];
+    self.tabBar.tintColor = [UIColor greenColor];
     self.tabBar.translucent = NO;
     
     [self addChildViewControllers];
@@ -45,7 +46,7 @@
 - (void)addChildViewController:(UIViewController *)VC andTitle:(NSString *)title andImageName:(NSString *)imageName andSelectedImageName:(NSString *)SelectedimageName{
     
     VC.title=title;
-    VC.tabBarItem.image=[UIImage imageNamed:[NSString stringWithFormat:@"%@",imageName]];
+    VC.tabBarItem.image=[[UIImage imageNamed:[NSString stringWithFormat:@"%@",imageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     VC.tabBarItem.selectedImage=[UIImage imageNamed:[NSString stringWithFormat:@"%@",SelectedimageName]];
     

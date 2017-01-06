@@ -125,12 +125,14 @@ static const NSString *numPerPage = @"6";
 
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, screenW, screenH-64-49-40) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, screenW, screenH-64-49-40) style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.showsVerticalScrollIndicator = NO;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         _tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        _tableView.backgroundView = [[UIView alloc] init];
+        _tableView.backgroundColor = [UIColor whiteColor];
         _tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
             [self loadNewData];
         }];

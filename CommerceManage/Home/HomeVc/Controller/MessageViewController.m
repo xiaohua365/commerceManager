@@ -264,6 +264,8 @@ static const NSString *numPerPage = @"6";
         _tableView.showsVerticalScrollIndicator = NO;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         _tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        _tableView.backgroundView = [[UIView alloc] init];
+        _tableView.backgroundColor = [UIColor whiteColor];
         _tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
             [self loadNewData];
         }];

@@ -71,7 +71,7 @@
 #pragma mark - getter
 - (NSArray *)titleArray {
     if (!_titleArray) {
-        _titleArray = @[@"新闻   简讯", @"商情   资讯"];
+        _titleArray = @[@"新闻 • 简讯", @"商情 • 资讯"];
     }
     return _titleArray;
 }
