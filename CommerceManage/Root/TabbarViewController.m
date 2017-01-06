@@ -12,6 +12,7 @@
 #import "ConferenceViewController.h"
 #import "AddressViewController.h"
 #import "MineViewController.h"
+#import "FlowerViewController.h"
 
 @interface TabbarViewController ()
 
@@ -34,7 +35,8 @@
     
     [self addChildViewController:[[HomeViewController alloc]init] andTitle:@"首页" andImageName:@"tab_home_nor" andSelectedImageName:@"tab_home"];
     [self addChildViewController:[[ConferenceViewController alloc]init] andTitle:@"会务" andImageName:@"tab_business_nor" andSelectedImageName:@"tab_business"];
-    [self addChildViewController:[[AddressViewController alloc]init] andTitle:@"通讯录" andImageName:@"tab_contacts_nor" andSelectedImageName:@"tab_contacts"];
+    [self addChildViewController:[[FlowerViewController alloc] init] andTitle:@"万花筒" andImageName:@"tab_wan_nor" andSelectedImageName:@"tab_wan"];
+    [self addChildViewController:[[AddressViewController alloc]init] andTitle:@"专家" andImageName:@"tab_financial_nor" andSelectedImageName:@"tab_financial"];
     [self addChildViewController:[[MineViewController alloc]init] andTitle:@"我的" andImageName:@"tab_mine_nor" andSelectedImageName:@"tab_mine"];
     
 }

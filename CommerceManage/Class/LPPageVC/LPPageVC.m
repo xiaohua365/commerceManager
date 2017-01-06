@@ -345,6 +345,16 @@ const NSInteger LPPageVCMaxVisiblePages         = 5;
         
         lastContentView = view;
         
+        UIView *line = [[UIView alloc] init];
+        line.backgroundColor = Color_RGBA(223, 223, 223, 1);
+        [_segmentContainerView addSubview:line];
+        [line mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(lastSegmentView).mas_offset(1);
+            make.left.mas_equalTo(lastSegmentView.mas_right);
+            make.width.mas_equalTo(1);
+            make.height.mas_equalTo(LPPageVCSegmentHeight-1);
+        }];
+        
         if (index < 3) {
             
             UIViewController * controller = [_dataSource pageVC:self viewControllerAtIndex:index];

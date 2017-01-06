@@ -176,7 +176,7 @@ static const NSString *numPerPage = @"6";
 #pragma mark - tableView Delegate & dataSource
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return FitSize(180);
+        return FitSize(105);
 
     }else {
         return 100;
@@ -262,7 +262,8 @@ static const NSString *numPerPage = @"6";
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.showsVerticalScrollIndicator = NO;
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        _tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
         _tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
             [self loadNewData];
         }];

@@ -40,6 +40,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        self.backgroundColor = [UIColor whiteColor];
         [self setUp];
     }
     return self;
@@ -48,9 +49,11 @@
 - (void)setUp {
     
     [self.contentView addSubview:self.imgView];
-    [self.imgView addSubview:self.grayView];
-    [self.grayView addSubview:self.titleLabel];
-    [self.grayView addSubview:self.timeLabel];
+//    [self.imgView addSubview:self.grayView];
+//    [self.grayView addSubview:self.titleLabel];
+//    [self.grayView addSubview:self.timeLabel];
+    [self.contentView addSubview:self.titleLabel];
+    [self.contentView addSubview:self.timeLabel];
     
     [self makeSubViewsLayout];
 }
@@ -58,22 +61,27 @@
 - (void)makeSubViewsLayout {
     
     [self.imgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
+        make.top.mas_equalTo(FitSize(15));
+        make.right.mas_equalTo(FitSize(-15));
+        make.width.mas_equalTo(FitSize(120));
+        make.height.mas_equalTo(FitSize(75));
     }];
     
-    [self.grayView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
-    }];
+//    [self.grayView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
+//    }];
     
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(FitSize(70));
-        make.left.right.mas_equalTo(0);
-        make.height.mas_equalTo(FitSize(25));
+        make.top.mas_equalTo(FitSize(15));
+        make.left.mas_equalTo(FitSize(15));
+        make.right.mas_equalTo(self.imgView.mas_left).mas_offset(FitSize(-5));
+        make.height.mas_equalTo(FitSize(45));
     }];
     
     [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.titleLabel.mas_bottom).mas_offset(FitSize(5));
-        make.left.right.mas_equalTo(0);
+        make.bottom.mas_equalTo(-FitSize(10));
+        make.left.mas_equalTo(15);
+        make.right.mas_equalTo(self.imgView.mas_left).mas_offset(FitSize(-15));
         make.height.mas_equalTo(FitSize(20));
     }];
     
@@ -86,7 +94,7 @@
     NSString *imgUrl = [NSString stringWithFormat:@"%@%@", URL_IP_IMG, model.fmImg];
     [self.imgView sd_setImageWithURL:[NSURL URLWithString:imgUrl] placeholderImage:PLACEHOLDER_IMG];
     
-    self.timeLabel.text = [NSString stringWithFormat:@"%@ %@", @"工商联", [PublicFunction getDateWith:model.ctime]];
+    self.timeLabel.text = [NSString stringWithFormat:@"%@ %@", @"北京工商联", [PublicFunction getDateWith:model.ctime]];
     self.titleLabel.text = model.title;
     
 }
@@ -111,9 +119,10 @@
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] init];
-        _titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:FitSize(18)];//加粗
-        _titleLabel.textAlignment = NSTextAlignmentCenter;
-        _titleLabel.textColor = [UIColor whiteColor];
+        _titleLabel.font = [UIFont systemFontOfSize:FitSize(17)];
+        _titleLabel.numberOfLines = 2;
+        _titleLabel.textAlignment = NSTextAlignmentLeft;
+        _titleLabel.textColor = Color_RGBA(51, 51, 51, 1);
     }
     return _titleLabel;
 }
@@ -121,9 +130,9 @@
 - (UILabel *)timeLabel {
     if (!_timeLabel) {
         _timeLabel = [[UILabel alloc] init];
-        _timeLabel.textAlignment = NSTextAlignmentCenter;
-        _timeLabel.textColor = [UIColor whiteColor];
-        _timeLabel.font = [UIFont systemFontOfSize:FitSize(14)];
+        _timeLabel.textAlignment = NSTextAlignmentLeft;
+        _timeLabel.textColor = Color_RGBA(153, 153, 153, 1);
+        _timeLabel.font = [UIFont systemFontOfSize:FitSize(15)];
     }
     return _timeLabel;
 }

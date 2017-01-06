@@ -92,7 +92,7 @@ static const NSString *numPerPage = @"6";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return FitSize(180);
+    return FitSize(105);
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -129,7 +129,8 @@ static const NSString *numPerPage = @"6";
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.showsVerticalScrollIndicator = NO;
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        _tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
         _tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
             [self loadNewData];
         }];
