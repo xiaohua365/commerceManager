@@ -70,6 +70,8 @@
     if (!_imgView) {
         _imgView = [[UIImageView alloc] init];
         _imgView.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGrayViewAction:)];
+        [_imgView addGestureRecognizer:tap];
     }
     return _imgView;
 }
@@ -78,8 +80,7 @@
     if (!_grayView) {
         _grayView = [[UIView alloc] init];
         _grayView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3];
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGrayViewAction:)];
-        [_grayView addGestureRecognizer:tap];
+        
     }
     return _grayView;
 }
