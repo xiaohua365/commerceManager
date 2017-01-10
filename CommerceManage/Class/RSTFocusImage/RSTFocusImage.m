@@ -121,7 +121,7 @@
     
     if (!_pageControl) {
         _pageControl = [[UIPageControl alloc] init];
-        _pageControl.frame = CGRectMake(0, FitSize(150), _imgWidth, 20);
+        _pageControl.frame = CGRectMake(screenW-100, FitSize(155), 100, 20);
         [self addSubview:_pageControl];
         _pageControl.currentPage = 0;
         _pageControl.numberOfPages = _imageUrl.count;

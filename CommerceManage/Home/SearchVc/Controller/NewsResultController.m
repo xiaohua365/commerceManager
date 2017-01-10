@@ -151,6 +151,7 @@ static const NSString *numPerPage = @"100";
         [self.navigationController pushViewController:business animated:YES];
     }
     
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 

@@ -23,7 +23,7 @@
     [self addSubview:self.imgView];
     [self.imgView addSubview:self.grayView];
     [self.grayView addSubview:self.titleLabel];
-    [self.grayView addSubview:self.timeLabel];
+//    [self.grayView addSubview:self.timeLabel];
     
     [self makeSubViewsLayout];
 }
@@ -35,20 +35,24 @@
     }];
     
     [self.grayView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
+//        make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
+        make.top.mas_equalTo(FitSize(145));
+        make.left.right.mas_equalTo(0);
+        make.height.mas_equalTo(FitSize(35));
     }];
     
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(FitSize(70));
-        make.left.right.mas_equalTo(0);
+        make.top.mas_equalTo(FitSize(5));
+        make.left.mas_equalTo(25);
+        make.right.mas_equalTo(0);
         make.height.mas_equalTo(FitSize(25));
     }];
     
-    [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.titleLabel.mas_bottom).mas_offset(FitSize(5));
-        make.left.right.mas_equalTo(0);
-        make.height.mas_equalTo(FitSize(20));
-    }];
+//    [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.mas_equalTo(self.titleLabel.mas_bottom).mas_offset(FitSize(5));
+//        make.left.right.mas_equalTo(0);
+//        make.height.mas_equalTo(FitSize(20));
+//    }];
     
     
 }
@@ -83,8 +87,8 @@
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] init];
-        _titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:FitSize(18)];//加粗
-        _titleLabel.textAlignment = NSTextAlignmentCenter;
+        _titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:FitSize(16)];//加粗
+//        _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.textColor = [UIColor whiteColor];
     }
     return _titleLabel;
