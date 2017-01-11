@@ -10,8 +10,19 @@
 
 @interface PublicFunction : NSObject
 
+
+/**
+ 获得日期时间
+
+ @param ctime 时间戳
+
+ @return 字符串时间
+ */
 + (NSString *)getDateWith:(NSString *)ctime;
 
 + (NSString *)addSeparatorPointForPriceString:(NSString *)str;
+
+//计算内容大小
++ (CGSize)getAutoWidthWith:(NSString *)text andSize:(CGSize)size andFont:(NSInteger)font;
 
 @end

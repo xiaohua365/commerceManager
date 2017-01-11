@@ -41,4 +41,14 @@
     return priceStr;
 }
 
+
++ (CGSize)getAutoWidthWith:(NSString *)text andSize:(CGSize)size andFont:(NSInteger)font {
+    NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:font]};
+    CGSize textSize = [text boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size;
+    
+    return textSize;
+}
+
+
+
 @end

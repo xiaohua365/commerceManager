@@ -8,6 +8,7 @@
 
 #import "MeetResultController.h"
 #import "ConferenceCell.h"
+#import "ConferDetailViewController.h"
 
 static const NSString *numPerPage = @"100";
 @interface MeetResultController ()<UITableViewDelegate, UITableViewDataSource>
@@ -159,7 +160,12 @@ static const NSString *numPerPage = @"100";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    ConferDetailViewController *detail = [[ConferDetailViewController alloc] init];
+    detail.conferModel = self.dataArr[indexPath.row];
     
+    
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:detail animated:YES];
 
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

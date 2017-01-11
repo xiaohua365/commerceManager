@@ -6,15 +6,15 @@
          contextName = "-[NewsDetailViewController loadNewsDetailData]:NewsDetailViewController.m">
       </ContextState>
       <ContextState
-         contextName = "+[AccountTool isLogin]:AccountTool.m">
-      </ContextState>
-      <ContextState
          contextName = "-[NewsWKViewController userContentController:didReceiveScriptMessage:]:NewsWKViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "self.imageArr">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "+[AccountTool isLogin]:AccountTool.m">
       </ContextState>
       <ContextState
          contextName = "-[MessageViewController tableView:cellForRowAtIndexPath:]:MessageViewController.m">
@@ -32,6 +32,14 @@
       </ContextState>
       <ContextState
          contextName = "-[LoginViewController loginManager]:LoginViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ConferDetailViewController makeSubViewLayout]:ConferDetailViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.conferModel">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "-[ChangeInfoViewController account]:ChangeInfoViewController.m">
@@ -71,6 +79,14 @@
          <PersistentStrings>
             <PersistentString
                value = "self.imageArr">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__45-[ConferenceViewController loadTableViewData]_block_invoke:ConferenceViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "url">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

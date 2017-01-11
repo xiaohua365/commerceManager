@@ -446,6 +446,7 @@
 		3A87BD361E24BAB600DF25E1 /* tab_wan.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A87BD331E24BAB600DF25E1 /* tab_wan.png */; };
 		3A87BD371E24BAB600DF25E1 /* tab_wan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A87BD341E24BAB600DF25E1 /* tab_wan@2x.png */; };
 		3A87BD381E24BAB600DF25E1 /* tab_wan@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A87BD351E24BAB600DF25E1 /* tab_wan@3x.png */; };
+		3A87BD3B1E24D14E00DF25E1 /* ConferDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A87BD3A1E24D14E00DF25E1 /* ConferDetailViewController.m */; };
 		3AE793C51E1657BF005C4D34 /* AreaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE793A91E1657BF005C4D34 /* AreaViewController.m */; };
 		3AE793C61E1657BF005C4D34 /* AssociationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE793AB1E1657BF005C4D34 /* AssociationViewController.m */; };
 		3AE793C71E1657BF005C4D34 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE793AD1E1657BF005C4D34 /* HomeViewController.m */; };
@@ -1284,6 +1285,8 @@
 		3A87BD331E24BAB600DF25E1 /* tab_wan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_wan.png; sourceTree = "<group>"; };
 		3A87BD341E24BAB600DF25E1 /* tab_wan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_wan@2x.png"; sourceTree = "<group>"; };
 		3A87BD351E24BAB600DF25E1 /* tab_wan@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_wan@3x.png"; sourceTree = "<group>"; };
+		3A87BD391E24D14E00DF25E1 /* ConferDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferDetailViewController.h; sourceTree = "<group>"; };
+		3A87BD3A1E24D14E00DF25E1 /* ConferDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferDetailViewController.m; sourceTree = "<group>"; };
 		3AE793A81E1657BF005C4D34 /* AreaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaViewController.h; sourceTree = "<group>"; };
 		3AE793A91E1657BF005C4D34 /* AreaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaViewController.m; sourceTree = "<group>"; };
 		3AE793AA1E1657BF005C4D34 /* AssociationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssociationViewController.h; sourceTree = "<group>"; };
@@ -2478,6 +2481,8 @@
 			children = (
 				3A864DEA1E10A7C4001CEC7F /* ConferenceViewController.h */,
 				3A864DEB1E10A7C4001CEC7F /* ConferenceViewController.m */,
+				3A87BD391E24D14E00DF25E1 /* ConferDetailViewController.h */,
+				3A87BD3A1E24D14E00DF25E1 /* ConferDetailViewController.m */,
 				3A0AE1B61E1E221E006BCD64 /* UIWebView */,
 				3A0AE1B71E1E222A006BCD64 /* WKWebView */,
 			);
@@ -3529,6 +3534,7 @@
 				3A0522941E11F60A00CEEEF0 /* ZXQRCodeDecoder.m in Sources */,
 				3A11F1D91E13579C00BBA7E0 /* MJPropertyKey.m in Sources */,
 				3AE793C51E1657BF005C4D34 /* AreaViewController.m in Sources */,
+				3A87BD3B1E24D14E00DF25E1 /* ConferDetailViewController.m in Sources */,
 				3A864F061E10B0FF001CEC7F /* UIImage+GIF.m in Sources */,
 				3A05224D1E11F60900CEEEF0 /* ZXRSSExpandedDecodedChar.m in Sources */,
 				3A05220D1E11F60900CEEEF0 /* ZXBoolArray.m in Sources */,
@@ -3767,7 +3773,7 @@
 				INFOPLIST_FILE = CommerceManage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Vaic.CommerceManage;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bjgsl.helper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -3783,7 +3789,7 @@
 				INFOPLIST_FILE = CommerceManage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Vaic.CommerceManage;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bjgsl.helper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

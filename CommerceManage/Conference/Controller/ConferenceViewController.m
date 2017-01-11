@@ -10,6 +10,7 @@
 #import "ConferenceCell.h"
 #import "SearchViewController.h"
 #import "ConferenceModel.h"
+#import "ConferDetailViewController.h"
 
 static const NSString *numPerPage = @"6";
 @interface ConferenceViewController ()<UITableViewDelegate, UITableViewDataSource>
@@ -128,7 +129,7 @@ static const NSString *numPerPage = @"6";
         }else {
             [SVProgressHUD showErrorWithStatus:responseObject[@"head"][@"rspMsg"]];
         }
-        
+        [self loadNewData];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:@"网络错误"];
@@ -168,7 +169,13 @@ static const NSString *numPerPage = @"6";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    ConferDetailViewController *detail = [[ConferDetailViewController alloc] init];
+    detail.conferModel = self.dataArr[indexPath.row];
     
+    
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:detail animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
