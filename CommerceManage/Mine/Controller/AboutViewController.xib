@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personal_page_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="44v-Nn-Pct">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="MAw-Hj-UcJ"/>
+                        <constraint firstAttribute="width" constant="71" id="NlG-KL-Dde"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Km-5g-g5n">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="单位名称：北京市工商业联合会北京市商会" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kj-rS-lbc">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="29" id="Jfg-Si-Tfl"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="单位地址：北京市崇文区白桥大街22号，广渠门桥西200米" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ff3-vD-dvH">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="54" id="I9F-tn-rPj"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yqB-s1-jPf" userLabel="line">
+                            <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="Mxj-7t-xxs"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLw-Ce-BYw" userLabel="line">
+                            <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="Ql9-8k-N9F"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联系邮箱：xuanjiaochu@bjgsl.org.cn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eU8-LV-1LY">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="8pu-h9-k4p"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="ff3-vD-dvH" firstAttribute="leading" secondItem="2Km-5g-g5n" secondAttribute="leading" constant="16" id="4PM-fI-hjq"/>
+                        <constraint firstItem="HLw-Ce-BYw" firstAttribute="top" secondItem="eU8-LV-1LY" secondAttribute="bottom" constant="16" id="8K6-pO-qJU"/>
+                        <constraint firstItem="eU8-LV-1LY" firstAttribute="top" secondItem="yqB-s1-jPf" secondAttribute="bottom" constant="15" id="8ag-XA-YS5"/>
+                        <constraint firstItem="ff3-vD-dvH" firstAttribute="top" secondItem="HLw-Ce-BYw" secondAttribute="bottom" constant="8" id="BOB-TZ-cZ7"/>
+                        <constraint firstAttribute="trailing" secondItem="HLw-Ce-BYw" secondAttribute="trailing" id="LlX-Wj-v3w"/>
+                        <constraint firstItem="HLw-Ce-BYw" firstAttribute="leading" secondItem="2Km-5g-g5n" secondAttribute="leading" id="POz-Oe-q72"/>
+                        <constraint firstAttribute="trailing" secondItem="eU8-LV-1LY" secondAttribute="trailing" constant="8" id="QsR-7Z-7wW"/>
+                        <constraint firstItem="yqB-s1-jPf" firstAttribute="leading" secondItem="2Km-5g-g5n" secondAttribute="leading" id="R1S-zB-8Vh"/>
+                        <constraint firstItem="yqB-s1-jPf" firstAttribute="top" secondItem="8Kj-rS-lbc" secondAttribute="bottom" constant="8" id="STT-7A-HCB"/>
+                        <constraint firstAttribute="trailing" secondItem="8Kj-rS-lbc" secondAttribute="trailing" id="Smu-aB-Erk"/>
+                        <constraint firstAttribute="height" constant="168" id="YLf-Rt-qxK"/>
+                        <constraint firstAttribute="trailing" secondItem="yqB-s1-jPf" secondAttribute="trailing" id="bpr-Pa-gmv"/>
+                        <constraint firstAttribute="trailing" secondItem="ff3-vD-dvH" secondAttribute="trailing" constant="8" id="cF8-Hk-Bu8"/>
+                        <constraint firstItem="eU8-LV-1LY" firstAttribute="leading" secondItem="2Km-5g-g5n" secondAttribute="leading" constant="16" id="dcE-TZ-KUo"/>
+                        <constraint firstItem="8Kj-rS-lbc" firstAttribute="top" secondItem="2Km-5g-g5n" secondAttribute="top" constant="8" id="ol1-re-hju"/>
+                        <constraint firstItem="8Kj-rS-lbc" firstAttribute="leading" secondItem="2Km-5g-g5n" secondAttribute="leading" constant="16" id="r9V-Db-j0J"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="北京市工商业联合会 版权所有" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNH-oT-VCc">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="r89-nG-nph"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2016 bjgsl.All Rights Reserved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x15-cz-T1Z">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="EDr-6d-jQf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小助手 V1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XG9-IW-Zxt">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="163" id="FRG-NM-uVT"/>
+                        <constraint firstAttribute="height" constant="21" id="Ykr-Tz-0jA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" red="0.12549019607843137" green="0.68235294117647061" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="2Km-5g-g5n" secondAttribute="trailing" id="4Bm-hP-PY4"/>
+                <constraint firstAttribute="trailing" secondItem="x15-cz-T1Z" secondAttribute="trailing" constant="16" id="5eR-I1-qQX"/>
+                <constraint firstItem="x15-cz-T1Z" firstAttribute="top" secondItem="tNH-oT-VCc" secondAttribute="bottom" id="LFl-Sf-rkR"/>
+                <constraint firstItem="XG9-IW-Zxt" firstAttribute="top" secondItem="44v-Nn-Pct" secondAttribute="bottom" constant="8" id="PRy-Br-1s7"/>
+                <constraint firstItem="2Km-5g-g5n" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QmV-hn-Vxk"/>
+                <constraint firstItem="XG9-IW-Zxt" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YCG-TB-jf7"/>
+                <constraint firstItem="2Km-5g-g5n" firstAttribute="top" secondItem="XG9-IW-Zxt" secondAttribute="bottom" constant="31" id="YNR-Js-vEP"/>
+                <constraint firstItem="44v-Nn-Pct" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="98" id="ZIH-tE-CU4"/>
+                <constraint firstItem="x15-cz-T1Z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="ZOF-te-laA"/>
+                <constraint firstItem="44v-Nn-Pct" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dC8-7s-ERc"/>
+                <constraint firstItem="tNH-oT-VCc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="48" id="u8k-04-Lb3"/>
+                <constraint firstAttribute="trailing" secondItem="tNH-oT-VCc" secondAttribute="trailing" constant="48" id="wbO-5o-dHW"/>
+                <constraint firstAttribute="bottom" secondItem="x15-cz-T1Z" secondAttribute="bottom" constant="43" id="xbu-Kn-dFl"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="personal_page_logo.png" width="71" height="64"/>
+    </resources>
+</document>

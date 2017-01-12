@@ -180,7 +180,7 @@
     if (_placeholder) {
         return _placeholder;
     }else{
-        UIImage *image = [UIImage imageNamed:@"img_v_r_v"];
+        UIImage *image = [UIImage imageNamed:@"personal_page_logo"];
         return image;
     }
 }

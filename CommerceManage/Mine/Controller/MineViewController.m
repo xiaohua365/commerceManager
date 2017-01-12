@@ -9,6 +9,7 @@
 #import "MineViewController.h"
 #import "LoginViewController.h"
 #import "ChangeInfoViewController.h"
+#import "AboutViewController.h"
 
 @interface MineViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -31,6 +32,8 @@
     
     self.nameLabel.text = [AccountTool account].niceName;
     self.numLabel.text = [AccountTool account].phoneNo;
+    
+    [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:3 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
 }
 
 - (void)viewDidLoad {
@@ -119,6 +122,12 @@
     }
     if (indexPath.row == 3) {
         [self alertView];
+    }
+    if (indexPath.row == 4) {
+        AboutViewController *about = [[AboutViewController alloc] init];
+        self.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:about animated:YES];
+        self.hidesBottomBarWhenPushed = NO;
     }
     
     if (indexPath.row == 5) {

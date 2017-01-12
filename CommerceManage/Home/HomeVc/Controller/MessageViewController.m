@@ -95,7 +95,7 @@ static const NSString *numPerPage = @"6";
         }
         
         
-        self.focusView = [[RSTFocusImage alloc] initWithFrame:CGRectMake(0, bannerY, screenW, FitSize(180)) Images:self.bananerImgs Placeholder:PLACEHOLDER_IMG Titles:self.titleArr Category:self.catoryArr];
+        self.focusView = [[RSTFocusImage alloc] initWithFrame:CGRectMake(0, bannerY, screenW, FitSize(180)) Images:self.bananerImgs Placeholder:[UIImage imageNamed:@"top_logo"] Titles:self.titleArr Category:self.catoryArr];
         self.focusView.delegate = self;
     }
     

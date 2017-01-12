@@ -27,9 +27,10 @@
     
     self.title = @"新闻详情";
     
-    [self getTapImageUrl];
-    [self getAllImageUrl];
-    [self webViewAddJSScript];
+    //js oc交互
+//    [self getTapImageUrl];
+//    [self getAllImageUrl];
+//    [self webViewAddJSScript];
     
     [self.view addSubview:self.webView];
     [self loadNewsDetailData];

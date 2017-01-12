@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+//    sleep(3);
 //    self.tabBar.barTintColor = [UIColor whiteColor];
 //    self.tabBar.tintColor = [UIColor greenColor];
     self.tabBar.translucent = NO;

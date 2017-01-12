@@ -81,14 +81,14 @@
     }];
     
     [self.weatherLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(FitSize(-10));
-        make.right.mas_equalTo(FitSize(-15));
-        make.width.mas_equalTo(FitSize(80));
-        make.height.mas_equalTo(FitSize(15));
+        make.bottom.mas_equalTo(FitSize(-3));
+        make.right.mas_equalTo(FitSize(-5));
+        make.width.mas_equalTo(FitSize(90));
+        make.height.mas_equalTo(FitSize(30));
     }];
     
     [self.weatherImage mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(self.weatherLabel.mas_top).mas_offset(FitSize(-5));
+        make.bottom.mas_equalTo(self.weatherLabel.mas_top).mas_offset(FitSize(0));
         make.centerX.mas_equalTo(self.weatherLabel.mas_centerX);
         make.width.mas_equalTo(FitSize(20));
         make.height.mas_equalTo(FitSize(18));
@@ -156,10 +156,13 @@
 - (UILabel *)weatherLabel {
     if (!_weatherLabel) {
         _weatherLabel = [[UILabel alloc] init];
-        _weatherLabel.text = @"多云6/-5°C";
-        _weatherLabel.textAlignment = NSTextAlignmentRight;
+        _weatherLabel.numberOfLines = 0;
+        [_weatherLabel sizeToFit];
+//        _weatherLabel.adjustsFontSizeToFitWidth = YES;
+        _weatherLabel.text = @"多云多云多云6/-5°C";
+        _weatherLabel.textAlignment = NSTextAlignmentCenter;
         _weatherLabel.textColor = APP_THEME_COLOR;
-        _weatherLabel.font = [UIFont systemFontOfSize:FitSize(13)];
+        _weatherLabel.font = [UIFont systemFontOfSize:FitSize(12)];
     }
     return _weatherLabel;
 }
