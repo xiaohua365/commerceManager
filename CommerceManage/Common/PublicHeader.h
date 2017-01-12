@@ -36,7 +36,7 @@
 #define MEETING_SIGNIN @"/gsl/meeting/signIn"               //3.8	会议签到接口
 #define MEETING_LIST @"/gsl/meeting/meetingList"            //3.9	会议列表查询接口
 #define MEETING_CHANGE_JOIN @"/gsl/meeting/join"            //3.10	修改会议参加状态接口
-
+#define WEATHER @"/gsl/meeting/weather"                     //3.11	获取天气情况接口
 
 //占位图
 #define PLACEHOLDER_IMG [UIImage imageNamed:@"top_logo"]

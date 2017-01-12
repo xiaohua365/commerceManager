@@ -96,6 +96,11 @@
 }
 
 
+- (void)setModel:(WeatherModel *)model {
+    _temperLabel.text = [NSString stringWithFormat:@"%@°C", model.maxW];
+    
+}
+
 
 - (UIImageView *)temperImage {
     if (!_temperImage) {

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "WeatherModel.h"
 @interface WeatherView : UIView
+
+@property (nonatomic, strong) WeatherModel *model;
 
 @end

@@ -14,6 +14,7 @@
 #import "BannerModel.h"
 #import "MessageNewsModel.h"
 #import "NewsWKViewController.h"
+#import "WeatherModel.h"
 
 static const NSString *numPerPage = @"6";
 
@@ -30,6 +31,7 @@ static const NSString *numPerPage = @"6";
 @property (nonatomic, strong) NSMutableArray *catoryArr;
 @property (nonatomic, strong) RSTFocusImage *focusView;
 @property (nonatomic, strong) WeatherView *weatherView;
+@property (nonatomic, strong) WeatherModel *weatherModel;
 
 @property (nonatomic, assign) NSInteger pageNum;
 
@@ -43,7 +45,9 @@ static const NSString *numPerPage = @"6";
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
     
+    _weatherView = [[WeatherView alloc] initWithFrame:CGRectMake(0, 0, screenW, FitSize(56))];
     [self loadBannerData];
+    [self loadWeatherData];
     [self loadTableViewData];
 }
 
@@ -72,11 +76,29 @@ static const NSString *numPerPage = @"6";
     
 }
 
+- (void)loadWeatherData {
+    NSString *url = [NSString stringWithFormat:@"%@%@%@", URL_IP, PROJECT_NAME, WEATHER];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager POST:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if ([responseObject[@"head"][@"rspCode"] isEqualToString:@"0"]) {
+            NSDictionary *dic = responseObject[@"body"][@"weather"];
+            WeatherModel *model = [WeatherModel mj_objectWithKeyValues:dic];
+            model.carNoLimit = responseObject[@"body"][@"carNoLimit"];
+            self.weatherModel = model;
+        }else {
+            
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@",error);
+    }];
+}
+
 
 
 - (void)initBannerView {
     
-    _weatherView = [[WeatherView alloc] initWithFrame:CGRectMake(0, 0, screenW, FitSize(56))];
+    
     
     CGFloat bannerY = CGRectGetHeight(_weatherView.frame);
     

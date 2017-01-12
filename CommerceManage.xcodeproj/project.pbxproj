@@ -446,6 +446,7 @@
 		3A5A59551E14E79D00A429BC /* ConferenceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A59541E14E79D00A429BC /* ConferenceModel.m */; };
 		3A5FCC3C1E13B00D00E5DB78 /* ChangeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FCC3B1E13B00D00E5DB78 /* ChangeInfoViewController.m */; };
 		3A5FCC3F1E13B7D100E5DB78 /* ChangePWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FCC3E1E13B7D100E5DB78 /* ChangePWViewController.m */; };
+		3A76EB021E27869400E7BAC0 /* WeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A76EB011E27869400E7BAC0 /* WeatherModel.m */; };
 		3A864DA21E10A3E0001CEC7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A864DA11E10A3E0001CEC7F /* main.m */; };
 		3A864DA51E10A3E0001CEC7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A864DA41E10A3E0001CEC7F /* AppDelegate.m */; };
 		3A864DAB1E10A3E0001CEC7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A864DA91E10A3E0001CEC7F /* Main.storyboard */; };
@@ -1281,6 +1282,8 @@
 		3A5FCC3B1E13B00D00E5DB78 /* ChangeInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeInfoViewController.m; sourceTree = "<group>"; };
 		3A5FCC3D1E13B7D100E5DB78 /* ChangePWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePWViewController.h; sourceTree = "<group>"; };
 		3A5FCC3E1E13B7D100E5DB78 /* ChangePWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePWViewController.m; sourceTree = "<group>"; };
+		3A76EB001E27869400E7BAC0 /* WeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherModel.h; sourceTree = "<group>"; };
+		3A76EB011E27869400E7BAC0 /* WeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherModel.m; sourceTree = "<group>"; };
 		3A864D9D1E10A3E0001CEC7F /* CommerceManage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommerceManage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A864DA11E10A3E0001CEC7F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3A864DA31E10A3E0001CEC7F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -3191,6 +3194,8 @@
 				3AE793D41E165869005C4D34 /* NewsDetailModel.m */,
 				3AE793B31E1657BF005C4D34 /* MessageNewsModel.h */,
 				3AE793B41E1657BF005C4D34 /* MessageNewsModel.m */,
+				3A76EB001E27869400E7BAC0 /* WeatherModel.h */,
+				3A76EB011E27869400E7BAC0 /* WeatherModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3789,6 +3794,7 @@
 				3A864F241E10E85B001CEC7F /* BannerImageView.m in Sources */,
 				3A0522871E11F60A00CEEEF0 /* ZXPDF417BarcodeMatrix.m in Sources */,
 				3A864E941E10B0E9001CEC7F /* AFURLSessionManager.m in Sources */,
+				3A76EB021E27869400E7BAC0 /* WeatherModel.m in Sources */,
 				3A0522451E11F60900CEEEF0 /* ZXAI013x0x1xDecoder.m in Sources */,
 				3A0521F31E11F60900CEEEF0 /* ZXSMTPResultParser.m in Sources */,
 				3A0521FB1E11F60900CEEEF0 /* ZXVEventResultParser.m in Sources */,
