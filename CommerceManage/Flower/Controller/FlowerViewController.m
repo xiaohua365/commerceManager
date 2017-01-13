@@ -13,8 +13,8 @@
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UICollectionViewFlowLayout *layout;
-@property (nonatomic, strong) NSMutableArray *dataArr;
-@property (nonatomic, strong) NSArray *urlArr;
+@property (nonatomic, strong) NSArray *dataArr;
+
 
 @end
 
@@ -79,7 +79,7 @@
     LogoCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LogoCollectionCell" forIndexPath:indexPath];
     
     
-    cell.imgView.image = [UIImage imageNamed:self.dataArr[indexPath.item]];
+    cell.imgView.image = [UIImage imageNamed:self.dataArr[indexPath.item][@"logo"]];
     cell.layer.borderColor = [UIColor grayColor].CGColor;
 //    cell.layer.borderWidth = 1;
 //    cell.layer.cornerRadius = 3;
@@ -95,7 +95,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSString *url = self.urlArr[indexPath.item];
+    NSString *url = self.dataArr[indexPath.item][@"url"];
     NSURL *URL = [NSURL URLWithString:url];
     UIApplication *app = [UIApplication sharedApplication];
     if ([app canOpenURL:URL]) {
@@ -106,47 +106,59 @@
 }
 
 
-- (NSMutableArray *)dataArr {
+- (NSArray *)dataArr {
     if (!_dataArr) {
-        NSMutableArray *mArr = [NSMutableArray array];
-        for (int i = 0; i < 23; i++) {
-            NSString *imageStr = [NSString stringWithFormat:@"img_%d", i];
-            [mArr addObject:imageStr];
-        }
-        _dataArr = [NSMutableArray arrayWithArray:mArr];
+        
+        _dataArr = @[@{@"logo":@"img_0",  //汉铭集团 0
+                         @"url":@"http://www.aceway.com.cn"},
+                     @{@"logo":@"img_1", //凹凸租车 1
+                       @"url":@"http://www.atzuche.com/"},
+                     @{@"logo":@"img_17",//用友集团 17
+                       @"url":@"http://www.yonyou.com/index.html?t=0.9121916741132736"},
+                     @{@"logo":@"img_6",//用友——畅捷通 6
+                       @"url":@"http://www.chanjet.com/"},
+                     @{@"logo":@"img_12",//工作圈 12
+                       @"url":@"http://www.chanjet.com/collection"},
+                     @{@"logo":@"img_16",//用友——友金所推广链接 16
+                       @"url":@"https://www.yyfax.com/h5/activity/channel.html?code=lhbb"},
+                     @{@"logo":@"img_2",//戎威远保安 2
+                       @"url":@"http://www.rwybaoan.com/"},
+                     @{@"logo":@"img_3",//北京银行 3
+                       @"url":@"http://www.bankofbeijing.com.cn/"},
+                     @{@"logo":@"img_4",//北京农商银行 4
+                       @"url":@"http://www.bjrcb.com/"},
+                     @{@"logo":@"img_5",//北京消费金融 5
+                       @"url":@"http://www.bobcfc.com/"},
+                     @{@"logo":@"img_7",//东方汇佳 7
+                       @"url":@"http://www.315job.com/"},
+                     @{@"logo":@"img_8",//北京古今来 8
+                       @"url":@"http://www.gujinlai.com/"},
+                     @{@"logo":@"img_9",//中国工行银行 9
+                       @"url":@"http://www.icbc.com.cn"},
+                     @{@"logo":@"img_10",//华夏银行 10
+                       @"url":@"http://www.hxb.com.cn/home/cn/"},
+                     @{@"logo":@"img_11",//廊坊银行 11
+                       @"url":@"http://www.lccb.com.cn/"},
+                     @{@"logo":@"img_13",//镕辉佳特 13
+                       @"url":@"http://www.bjrhjt.cn/subject/subject-cylm.html"},
+                     @{@"logo":@"img_14",//特卫安防 14
+                       @"url":@"http://www.cnguardee.com/index.html"},
+                     @{@"logo":@"img_15",//兴业银行 15
+                       @"url":@"http://www.cib.com.cn/cn/index.html"},
+                     @{@"logo":@"img_18",//邮储银行 18
+                       @"url":@"http://www.psbc.com/cn/index.html"},
+                     @{@"logo":@"img_19",//中国民生银行 19
+                       @"url":@"http://www.cmbc.com.cn/"},
+                     @{@"logo":@"img_20",//农业银行 20
+                       @"url":@"http://www.abchina.com/cn/"},
+                     @{@"logo":@"img_21",//中国银行 21
+                       @"url":@"http://www.boc.cn/"},
+                     @{@"logo":@"img_22", //中建华集团 22
+                       @"url":@"http://www.zjhcpa.com.cn/"},
+                     ];
     }
     return _dataArr;
     
-}
-
-- (NSArray *)urlArr {
-    if (!_urlArr) {
-        _urlArr = @[@"http://www.aceway.com.cn",  //汉铭集团
-                    @"http://www.atzuche.com/",   //凹凸租车
-                    @"http://www.rwybaoan.com/",  //戎威远保安
-                    @"http://www.bankofbeijing.com.cn/",  //北京银行
-                    @"http://www.bjrcb.com/",  //北京农商银行
-                    @"",  //北京消费金融
-                    @"http://www.chanjet.com/",  //用友——畅捷通
-                    @"http://www.315job.com/", //东方汇佳
-                    @"http://www.gujinlai.com/", //北京古今来
-                    @"http://www.icbc.com.cn", //中国工行银行
-                    @"http://www.hxb.com.cn/home/cn/", //华夏银行
-                    @"http://www.lccb.com.cn/", //廊坊银行
-                    @"http://www.chanjet.com/collection", //工作圈
-                    @"http://www.bjrhjt.cn/subject/subject-cylm.html", //镕辉佳特
-                    @"http://www.cnguardee.com/index.html", //特卫安防
-                    @"http://www.cib.com.cn/cn/index.html", //兴业银行
-                    @"https://www.yyfax.com/h5/activity/channel.html?code=lhbb", //用友——友金所推广链接
-                    @"http://www.yonyou.com/index.html?t=0.9121916741132736", //用友集团
-                    @"http://www.psbc.com/cn/index.html", //邮储银行
-                    @"http://www.cmbc.com.cn/", //中国民生银行
-                    @"http://www.abchina.com/cn/、", //农业银行
-                    @"http://www.boc.cn/", //中国银行
-                    @"http://www.zjhcpa.com.cn/", //中建华集团
-                    ];
-    }
-    return _urlArr;
 }
 
 

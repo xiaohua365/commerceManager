@@ -21,7 +21,7 @@
 
 @property (nonatomic, strong) UILabel *firstLine;
 @property (nonatomic, strong) UILabel *secondLine;
-
+@property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
 @end
 
 @implementation LoginViewController
@@ -122,7 +122,7 @@
 }
 
 - (void)loginManager {
-    
+    [self showAnimation];
     NSString *url = [NSString stringWithFormat:@"%@%@%@", URL_IP, PROJECT_NAME, USER_LOGIN];
 //    NSString *md5Pw = [self md5:self.pwTxtField.text];
     NSDictionary *para = @{
@@ -134,14 +134,17 @@
         
         if ([responseObject[@"head"][@"rspCode"] isEqualToString:@"0"]) {
             NSDictionary *user = responseObject[@"body"][@"user"];
+            [self stopAnimation];
+            [SVProgressHUD showSuccessWithStatus:@"登录成功"];
             [self loginSuccess];
             [self saveUserInfoWith:user];
-            [SVProgressHUD showSuccessWithStatus:@"登录成功"];
+            
         }else {
             [SVProgressHUD showErrorWithStatus:responseObject[@"head"][@"rspMsg"]];
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:@"网络错误"];
+        [self stopAnimation];
     }];
     
 }
@@ -153,6 +156,26 @@
     
     [[NSUserDefaults standardUserDefaults] setObject:self.phoneTxtField.text forKey:@"phoneNum"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void)showAnimation {
+    //创建UIActivityIndicatorView背底半透明View
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenW, screenH)];
+    [view setTag:108];
+    [view setBackgroundColor:[UIColor blackColor]];
+    [view setAlpha:0.5];
+    [self.view addSubview:view];
+    _activityIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 32.0f, 32.0f)];
+    [_activityIndicator setCenter:view.center];
+    [_activityIndicator setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhite];
+    [view addSubview:_activityIndicator];
+    [_activityIndicator startAnimating];
+}
+
+- (void)stopAnimation {
+    [_activityIndicator stopAnimating];
+    UIView *view = (UIView*)[self.view viewWithTag:108];
+    [view removeFromSuperview];
 }
 
 
@@ -168,7 +191,6 @@
     
     TabbarViewController *tabbar = [[TabbarViewController alloc] init];
     window.rootViewController = tabbar;
-    
     
 }
 

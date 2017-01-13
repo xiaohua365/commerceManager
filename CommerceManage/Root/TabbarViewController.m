@@ -13,6 +13,7 @@
 #import "AddressViewController.h"
 #import "MineViewController.h"
 #import "FlowerViewController.h"
+#import "FinanceViewController.h"
 
 @interface TabbarViewController ()
 
@@ -38,6 +39,7 @@
     [self addChildViewController:[[HomeViewController alloc]init] andTitle:@"首页" andImageName:@"tab_home_nor" andSelectedImageName:@"tab_home"];
     [self addChildViewController:[[ConferenceViewController alloc]init] andTitle:@"会务" andImageName:@"tab_business_nor" andSelectedImageName:@"tab_business"];
     [self addChildViewController:[[FlowerViewController alloc] init] andTitle:@"万花筒" andImageName:@"tab_wan" andSelectedImageName:@"tab_wan"];
+    //AddressViewController  FinanceViewController
     [self addChildViewController:[[AddressViewController alloc]init] andTitle:@"专家" andImageName:@"tab_financial_nor" andSelectedImageName:@"tab_financial"];
     [self addChildViewController:[[MineViewController alloc]init] andTitle:@"我的" andImageName:@"tab_mine_nor" andSelectedImageName:@"tab_mine"];
     
