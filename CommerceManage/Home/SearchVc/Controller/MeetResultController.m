@@ -21,6 +21,11 @@ static const NSString *numPerPage = @"100";
 
 @implementation MeetResultController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self refreshData];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"会议搜索结果";
@@ -28,7 +33,7 @@ static const NSString *numPerPage = @"100";
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
     [self setBackBtn];
-    [self searchManager];
+//    [self searchManager];
 }
 
 - (void)setBackBtn {
@@ -48,6 +53,11 @@ static const NSString *numPerPage = @"100";
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
+- (void)refreshData {
+    [self.dataArr removeAllObjects];
+    [self.tableView reloadData];
+    [self searchManager];
+}
 
 - (void)searchManager {
     

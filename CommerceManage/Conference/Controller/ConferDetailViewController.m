@@ -27,7 +27,7 @@ static CGFloat marginHeigh = 15;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = Color_RGBA(248, 248, 245, 1);
+    self.view.backgroundColor = GRAY_COLOR;
     self.title = @"会议详情";
     
     [self makeSubViewLayout];
@@ -55,7 +55,7 @@ static CGFloat marginHeigh = 15;
     self.conveneTime.text = [NSString stringWithFormat:@"召开时间:%@        参会地点:%@", time, self.conferModel.meetingLoc];
     self.conveneTime.textAlignment = NSTextAlignmentLeft;
     self.conveneTime.font = [UIFont systemFontOfSize:FitSize(15)];
-    self.conveneTime.textColor = Color_RGBA(181, 180, 180, 1);
+    self.conveneTime.textColor = Black_COLOR;
     [self.scrollView addSubview:self.conveneTime];
     
     //发布时间
@@ -63,7 +63,7 @@ static CGFloat marginHeigh = 15;
     NSString *creatTime = [PublicFunction getDateWith:self.conferModel.ctime];
     self.creatTime.text = [NSString stringWithFormat:@"发布时间:%@        来源:工商联", creatTime];
     self.creatTime.font = [UIFont systemFontOfSize:FitSize(15)];
-    self.creatTime.textColor = Color_RGBA(181, 180, 180, 1);
+    self.creatTime.textColor = Black_COLOR;
     self.creatTime.textAlignment = NSTextAlignmentLeft;
     [self.scrollView addSubview:self.creatTime];
     

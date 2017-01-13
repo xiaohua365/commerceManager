@@ -79,12 +79,13 @@ static const NSString *numPerPage = @"6";
 - (void)loadWeatherData {
     NSString *url = [NSString stringWithFormat:@"%@%@%@", URL_IP, PROJECT_NAME, WEATHER];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager POST:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager POST:url parameters:@{} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if ([responseObject[@"head"][@"rspCode"] isEqualToString:@"0"]) {
             NSDictionary *dic = responseObject[@"body"][@"weather"];
             WeatherModel *model = [WeatherModel mj_objectWithKeyValues:dic];
             model.carNoLimit = responseObject[@"body"][@"carNoLimit"];
             self.weatherModel = model;
+            _weatherView.model = model;
         }else {
             
         }
@@ -180,6 +181,7 @@ static const NSString *numPerPage = @"6";
     self.pageNum = 1;
     
     [self loadBannerData];
+    [self loadWeatherData];
     [self loadTableViewData];
     
 }

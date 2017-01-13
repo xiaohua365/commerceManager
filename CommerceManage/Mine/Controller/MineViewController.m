@@ -103,7 +103,7 @@
     cell.textLabel.font = [UIFont systemFontOfSize:FitSize(17)];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    if (indexPath.row == 3) {
+    if (indexPath.row == 1) {
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2fM", [[SDImageCache sharedImageCache] getSize]/1000.0/1000.0];
     }
     
@@ -120,17 +120,17 @@
         [self.navigationController pushViewController:changeInfo animated:YES];
         self.hidesBottomBarWhenPushed = NO;
     }
-    if (indexPath.row == 3) {
+    if (indexPath.row == 1) {
         [self alertView];
     }
-    if (indexPath.row == 4) {
+    if (indexPath.row == 2) {
         AboutViewController *about = [[AboutViewController alloc] init];
         self.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:about animated:YES];
         self.hidesBottomBarWhenPushed = NO;
     }
     
-    if (indexPath.row == 5) {
+    if (indexPath.row == 3) {
         [self logoutAction];
     }
     
@@ -201,7 +201,7 @@
 - (NSArray *)dataArr {
     
     if (!_dataArr) {
-        _dataArr = @[@"账号管理", @"助理管理",@"新消息通知",@"清除缓存",@"关于",@"退出登录",];
+        _dataArr = @[@"账号管理",@"清除缓存",@"关于",@"退出登录",];
     }
     return _dataArr;
     

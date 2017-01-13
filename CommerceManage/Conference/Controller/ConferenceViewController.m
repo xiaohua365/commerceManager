@@ -23,7 +23,9 @@ static const NSString *numPerPage = @"6";
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+//    [self.tableView.header beginRefreshing];
     [self loadNewData];
+    [self.tableView reloadData];
 }
 
 - (void)viewDidLoad {
@@ -170,8 +172,9 @@ static const NSString *numPerPage = @"6";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     ConferDetailViewController *detail = [[ConferDetailViewController alloc] init];
-    detail.conferModel = self.dataArr[indexPath.row];
-    
+    if (self.dataArr.count > 0) {
+        detail.conferModel = self.dataArr[indexPath.row];
+    }
     
     self.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:detail animated:YES];

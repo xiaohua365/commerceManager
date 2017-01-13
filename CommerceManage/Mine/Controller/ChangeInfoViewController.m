@@ -56,7 +56,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cellID"];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    if (indexPath.section == 1) {
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    
     cell.textLabel.text = self.dataArr[indexPath.section][indexPath.row];
     cell.textLabel.font = [UIFont systemFontOfSize:FitSize(17)];
     cell.detailTextLabel.text = self.uersData[indexPath.section][indexPath.row];

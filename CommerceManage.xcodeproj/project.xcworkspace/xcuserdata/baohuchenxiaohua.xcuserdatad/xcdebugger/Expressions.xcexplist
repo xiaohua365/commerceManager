@@ -3,7 +3,7 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "__38-[NewsWKViewController getTapImageUrl]_block_invoke:NewsWKViewController.m">
+         contextName = "-[NewsDetailViewController loadNewsDetailData]:NewsDetailViewController.m">
       </ContextState>
       <ContextState
          contextName = "-[NewsWKViewController userContentController:didReceiveScriptMessage:]:NewsWKViewController.m">
@@ -78,10 +78,18 @@
          contextName = "__42-[MessageViewController loadTableViewData]_block_invoke:MessageViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.dataArr">
+               value = "para">
             </PersistentString>
             <PersistentString
-               value = "para">
+               value = "self.dataArr">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ConferenceViewController tableView:didSelectRowAtIndexPath:]:ConferenceViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.dataArr">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -102,7 +110,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[NewsDetailViewController loadNewsDetailData]:NewsDetailViewController.m">
+         contextName = "__38-[NewsWKViewController getTapImageUrl]_block_invoke:NewsWKViewController.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

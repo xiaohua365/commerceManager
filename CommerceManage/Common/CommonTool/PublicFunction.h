@@ -25,4 +25,9 @@
 //计算内容大小
 + (CGSize)getAutoWidthWith:(NSString *)text andSize:(CGSize)size andFont:(NSInteger)font;
 
+//阳历转农历
++ (NSString *)getChineseCalendarWithDate:(NSString*)date;
+
+//获取当前日期
++ (NSString *)getCurrentDate;
 @end

@@ -24,7 +24,7 @@
 #define PROJECT_NAME @"gsl-api"        //内网
 //#define PROJECT_NAME @"gsl-api"    //外网
 
-
+#define WEATHER_IMG @"http://files.heweather.com/cond_icon/"  //天气图片接口
 
 #define GENERAL_NEWS @"/gsl/news/newsList"                  //3.1	普通新闻列表接口
 #define BANNER_NEWS @"/gsl/news/newsBannerList"             //3.2	Banner新闻列表接口
@@ -36,7 +36,7 @@
 #define MEETING_SIGNIN @"/gsl/meeting/signIn"               //3.8	会议签到接口
 #define MEETING_LIST @"/gsl/meeting/meetingList"            //3.9	会议列表查询接口
 #define MEETING_CHANGE_JOIN @"/gsl/meeting/join"            //3.10	修改会议参加状态接口
-#define WEATHER @"/gsl/meeting/weather"                     //3.11	获取天气情况接口
+#define WEATHER @"/weather/getweather"                     //3.11	获取天气情况接口
 
 //占位图
 #define PLACEHOLDER_IMG [UIImage imageNamed:@"top_logo"]
@@ -52,6 +52,11 @@
 //app 主题色
 #define APP_THEME_COLOR Color_RGBA(57,166,220,1)
 
+//浅灰色
+#define GRAY_COLOR Color_RGBA(243,243,243,1)
+
+//浅黑色
+#define Black_COLOR Color_RGBA(51,51,51,1)
 
 #define FitSize(v) ((v)/375.0f*[[UIScreen mainScreen] bounds].size.width)
 

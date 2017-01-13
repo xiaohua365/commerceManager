@@ -31,6 +31,11 @@ static const NSString *numPerPage = @"100";
 
 @implementation NewsResultController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -59,6 +64,7 @@ static const NSString *numPerPage = @"100";
 - (void)backAction:(UIButton *)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
+
 
 
 - (void)searchManager {

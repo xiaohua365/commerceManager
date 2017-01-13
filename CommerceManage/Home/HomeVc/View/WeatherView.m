@@ -81,10 +81,10 @@
     }];
     
     [self.weatherLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(FitSize(-3));
+        make.bottom.mas_equalTo(FitSize(-7));
         make.right.mas_equalTo(FitSize(-5));
         make.width.mas_equalTo(FitSize(90));
-        make.height.mas_equalTo(FitSize(30));
+        make.height.mas_equalTo(FitSize(20));
     }];
     
     [self.weatherImage mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -97,9 +97,30 @@
 
 
 - (void)setModel:(WeatherModel *)model {
-    _temperLabel.text = [NSString stringWithFormat:@"%@°C", model.maxW];
+    self.temperLabel.text = [NSString stringWithFormat:@"%@°C", model.maxW];
+    NSString *weatherImg = [NSString stringWithFormat:@"%@%@.png",WEATHER_IMG, model.code];
+    [self.weatherImage sd_setImageWithURL:[NSURL URLWithString:weatherImg] placeholderImage:[UIImage imageNamed:@"icon_partly-cloudy"]];
+    
+    NSString *weather = [NSString stringWithFormat:@"%@ %@/%@°C", model.dayTxt,model.minW,model.maxW];
+    self.weatherLabel.text = weather;
+    
+    NSString *pmText = [NSString stringWithFormat:@"PM %@   限行尾号 %@", model.pmten,  model.carNoLimit];
+    self.PMLabel.attributedText = [self getAttributedStringWithString:pmText];
+    
+    NSString *currentDate = [PublicFunction getCurrentDate];
+    NSString *chineseDate = [PublicFunction getChineseCalendarWithDate:currentDate];
+    self.dateLabel.text = [NSString stringWithFormat:@"%@  %@", currentDate, chineseDate];
     
 }
+
+- (NSAttributedString *)getAttributedStringWithString:(NSString *)text {
+    NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:text];
+    NSInteger length = text.length;
+    [attrStr addAttribute:NSForegroundColorAttributeName value:APP_THEME_COLOR range:NSMakeRange(2, 3)];
+    [attrStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(length-3, 3)];
+    return attrStr;
+}
+
 
 
 - (UIImageView *)temperImage {
@@ -130,8 +151,8 @@
 - (UILabel *)dateLabel {
     if (!_dateLabel) {
         _dateLabel = [[UILabel alloc] init];
-        _dateLabel.text = @"2016-12-22  十一月十四  星期四";
-        _dateLabel.font = [UIFont systemFontOfSize:FitSize(13)];
+        _dateLabel.text = @"1970-1-1  十一月十四  星期四";
+        _dateLabel.font = [UIFont systemFontOfSize:FitSize(14)];
     }
     return _dateLabel;
 }
@@ -161,13 +182,13 @@
 - (UILabel *)weatherLabel {
     if (!_weatherLabel) {
         _weatherLabel = [[UILabel alloc] init];
-        _weatherLabel.numberOfLines = 0;
+//        _weatherLabel.numberOfLines = 0;
         [_weatherLabel sizeToFit];
-//        _weatherLabel.adjustsFontSizeToFitWidth = YES;
-        _weatherLabel.text = @"多云多云多云6/-5°C";
+        _weatherLabel.adjustsFontSizeToFitWidth = YES;
+        _weatherLabel.text = @"多云6/-5°C";
         _weatherLabel.textAlignment = NSTextAlignmentCenter;
         _weatherLabel.textColor = APP_THEME_COLOR;
-        _weatherLabel.font = [UIFont systemFontOfSize:FitSize(12)];
+        _weatherLabel.font = [UIFont systemFontOfSize:FitSize(14)];
     }
     return _weatherLabel;
 }

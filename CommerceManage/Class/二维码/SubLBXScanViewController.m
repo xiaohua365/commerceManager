@@ -198,14 +198,14 @@
     [manager POST:url parameters:para progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         if ([responseObject[@"head"][@"rspCode"] isEqualToString:@"0"]) {
-            [SVProgressHUD showSuccessWithStatus:@"签到成功" duration:2];
+            [SVProgressHUD showSuccessWithStatus:@"签到成功" duration:3];
         }else {
-            [SVProgressHUD showErrorWithStatus:responseObject[@"head"][@"rspMsg"] duration:2];
+            [SVProgressHUD showErrorWithStatus:responseObject[@"head"][@"rspMsg"] duration:3];
         }
         
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [SVProgressHUD showErrorWithStatus:@"网络错误" duration:2];
+        [SVProgressHUD showErrorWithStatus:@"网络错误" duration:3];
     }];
     
 }
