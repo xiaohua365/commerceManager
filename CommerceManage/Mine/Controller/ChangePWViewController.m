@@ -88,7 +88,7 @@
 
 - (UIView *)bgView {
     if (!_bgView) {
-        _bgView = [[UIView alloc] initWithFrame:CGRectMake(0, FitSize(10), screenW, FitSize(150))];
+        _bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 64+FitSize(10), screenW, FitSize(150))];
         _bgView.backgroundColor = [UIColor whiteColor];
     }
     return _bgView;
@@ -164,7 +164,7 @@
 
 - (UIButton *)makeButton {
     if (!_makeButton) {
-        _makeButton = [[UIButton alloc] initWithFrame:CGRectMake(FitSize(20), FitSize(180), screenW-FitSize(40), FitSize(40))];
+        _makeButton = [[UIButton alloc] initWithFrame:CGRectMake(FitSize(20), 64+FitSize(180), screenW-FitSize(40), FitSize(40))];
         [_makeButton setImage:[UIImage imageNamed:@"change_password_page_button_save"] forState:UIControlStateNormal];
         [_makeButton addTarget:self action:@selector(changeAction:) forControlEvents:UIControlEventTouchUpInside];
     }

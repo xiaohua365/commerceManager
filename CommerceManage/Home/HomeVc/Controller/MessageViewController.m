@@ -8,17 +8,17 @@
 
 #import "MessageViewController.h"
 #import "MessageTableCell.h"
-#import "RSTFocusImage.h"
 #import "WeatherView.h"
 #import "TableHeaderView.h"
 #import "BannerModel.h"
 #import "MessageNewsModel.h"
 #import "NewsWKViewController.h"
 #import "WeatherModel.h"
+#import "SDCycleScrollView.h"
 
 static const NSString *numPerPage = @"6";
 
-@interface MessageViewController ()<UITableViewDelegate, UITableViewDataSource, RSTFocusImageDelegate> {
+@interface MessageViewController ()<UITableViewDelegate, UITableViewDataSource,SDCycleScrollViewDelegate> {
     UIView *_headerView;
 }
 
@@ -29,10 +29,9 @@ static const NSString *numPerPage = @"6";
 @property (nonatomic, strong) NSMutableArray *bananerImgs;
 @property (nonatomic, strong) NSMutableArray *titleArr;
 @property (nonatomic, strong) NSMutableArray *catoryArr;
-@property (nonatomic, strong) RSTFocusImage *focusView;
 @property (nonatomic, strong) WeatherView *weatherView;
 @property (nonatomic, strong) WeatherModel *weatherModel;
-
+@property (nonatomic, strong) SDCycleScrollView *CycleView;
 @property (nonatomic, assign) NSInteger pageNum;
 
 @end
@@ -64,7 +63,6 @@ static const NSString *numPerPage = @"6";
                 BannerModel *model = [BannerModel mj_objectWithKeyValues:dic];
                 [self.bannerData addObject:model];
             }
-            
             [self initBannerView];
         }
         
@@ -111,23 +109,31 @@ static const NSString *numPerPage = @"6";
         
         for (BannerModel *model in self.bannerData) {
             [self.titleArr addObject:model.title];
-            [self.bananerImgs addObject:model.fmImg];
+            [self.bananerImgs addObject:[NSString stringWithFormat:@"%@%@", URL_IP_IMG,model.fmImg]];
             
             NSString *catory = [NSString stringWithFormat:@"%@ %@", @"工商联", [PublicFunction getDateWith:model.ctime]];
             [self.catoryArr addObject:catory];
         }
         
-        
-        self.focusView = [[RSTFocusImage alloc] initWithFrame:CGRectMake(0, bannerY, screenW, FitSize(180)) Images:self.bananerImgs Placeholder:[UIImage imageNamed:@"top_logo"] Titles:self.titleArr Category:self.catoryArr];
-        self.focusView.delegate = self;
+        if (self.titleArr.count < 2) {
+            [self.titleArr addObject:@"工商联"];
+        }
+        self.CycleView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, bannerY, screenW, FitSize(180)) delegate:self placeholderImage:[UIImage imageNamed:@"top_logo"]];
+        self.CycleView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
+        self.CycleView.titlesGroup = self.titleArr;
+        self.CycleView.currentPageDotColor = [UIColor whiteColor]; // 自定义分页控件小圆标颜色
+        self.CycleView.imageURLStringsGroup = self.bananerImgs;
     }
     
-    CGFloat focusY = CGRectGetHeight(self.focusView.frame);
+    CGFloat focusY = CGRectGetHeight(self.CycleView.frame);
     
     _headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenW, bannerY + focusY)];
     
     [_headerView addSubview:self.weatherView];
-    [_headerView addSubview:self.focusView];
+    if (self.bannerData.count > 0) {
+        [_headerView addSubview:self.CycleView];
+    }
+    
     
     self.tableView.tableHeaderView = _headerView;
     
@@ -261,10 +267,11 @@ static const NSString *numPerPage = @"6";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-#pragma mark - FocusImage Delegate
 
-- (void)tapFocusWithIndex:(NSInteger)index {
-   
+#pragma mark - SDCycleScrollViewDelegate
+
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
+{
     NewsWKViewController *detail = [[NewsWKViewController alloc] init];
     BannerModel *model = self.bannerData[index];
     detail.newsID = model.ID;
@@ -272,10 +279,6 @@ static const NSString *numPerPage = @"6";
     self.navigationController.viewControllers[0].hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:detail animated:YES];
     self.navigationController.viewControllers[0].hidesBottomBarWhenPushed = NO;
-    
-    
-    
-    
 }
 
 

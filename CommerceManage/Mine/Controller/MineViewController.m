@@ -28,7 +28,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = YES;
+//    self.navigationController.navigationBarHidden = YES;
     
     self.nameLabel.text = [AccountTool account].niceName;
     self.numLabel.text = [AccountTool account].phoneNo;

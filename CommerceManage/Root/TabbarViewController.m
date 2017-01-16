@@ -39,7 +39,7 @@
     [self addChildViewController:[[ConferenceViewController alloc]init] andTitle:@"会务" andImageName:@"tab_business_nor" andSelectedImageName:@"tab_business"];
     [self addChildViewController:[[FlowerViewController alloc] init] andTitle:@"万花筒" andImageName:@"tab_wan" andSelectedImageName:@"tab_wan"];
     //AddressViewController  FinanceViewController //CCFinanceViewController
-    [self addChildViewController:[[CCFinanceViewController alloc]init] andTitle:@"专家" andImageName:@"tab_financial_nor" andSelectedImageName:@"tab_financial"];
+    [self addChildViewController:[[AddressViewController alloc]init] andTitle:@"专家" andImageName:@"tab_financial_nor" andSelectedImageName:@"tab_financial"];
     [self addChildViewController:[[MineViewController alloc]init] andTitle:@"我的" andImageName:@"tab_mine_nor" andSelectedImageName:@"tab_mine"];
     
 }

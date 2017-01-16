@@ -50,18 +50,12 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[ChangeInfoViewController account]:ChangeInfoViewController.m">
+         contextName = "-[MessageViewController initBannerView]:MessageViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "_uersData">
-            </PersistentString>
-            <PersistentString
-               value = "_account">
+               value = "self.titleArr">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "__46-[NewsDetailViewController loadNewsDetailData]_block_invoke:NewsDetailViewController.m">
       </ContextState>
       <ContextState
          contextName = "-[RSTFocusImage loadImage]:RSTFocusImage.m">
@@ -71,6 +65,20 @@
             </PersistentString>
             <PersistentString
                value = "_placeholder">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__46-[NewsDetailViewController loadNewsDetailData]_block_invoke:NewsDetailViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ChangeInfoViewController account]:ChangeInfoViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_uersData">
+            </PersistentString>
+            <PersistentString
+               value = "_account">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -98,6 +106,14 @@
          <PersistentStrings>
             <PersistentString
                value = "self.imageArr">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[RSTFocusImage initSubview]:RSTFocusImage.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_titles">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
