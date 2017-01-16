@@ -25,7 +25,7 @@
         [UINavigationBar appearance].tintColor = [UIColor blackColor];
         //        [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:18], NSForegroundColorAttributeName : [UIColor whiteColor]}];
         [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
-        [[UINavigationBar appearance] setTranslucent:NO];
+//        [[UINavigationBar appearance] setTranslucent:NO];
     }
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];

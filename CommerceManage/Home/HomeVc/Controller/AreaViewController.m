@@ -70,7 +70,7 @@
 
 - (UITableView *)taleView {
     if (!_taleView) {
-        _taleView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, screenW, screenH-64) style:UITableViewStylePlain];
+        _taleView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, screenW, screenH) style:UITableViewStylePlain];
         _taleView.delegate = self;
         _taleView.dataSource = self;
         _taleView.showsVerticalScrollIndicator = NO;

@@ -56,6 +56,7 @@
     self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableView.bounces = NO;
+    self.tableView.backgroundColor = Color_RGBA(244, 244, 244, 1);
     [self.view addSubview:self.tableView];
     
     //头像

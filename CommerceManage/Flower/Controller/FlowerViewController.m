@@ -43,7 +43,7 @@
 - (void)setCollectionView {
     _layout = [[UICollectionViewFlowLayout alloc] init];
     
-    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, screenW, screenH-49-64) collectionViewLayout:_layout];
+    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, screenW, screenH-49) collectionViewLayout:_layout];
     _collectionView.backgroundColor = Color_RGBA(243, 243, 243, 1);
     _collectionView.dataSource = self;
     _collectionView.delegate = self;
