@@ -17,6 +17,7 @@
 @property (nonatomic, strong) UILabel       *PMLabel;
 @property (nonatomic, strong) UIImageView   *weatherImage;
 @property (nonatomic, strong) UILabel       *weatherLabel;
+@property (nonatomic, strong) UILabel       *carLabel;
 
 @end
 
@@ -40,6 +41,7 @@
     [self addSubview:self.PMLabel];
     [self addSubview:self.weatherImage];
     [self addSubview:self.weatherLabel];
+    [self addSubview:self.carLabel];
     
     [self makeSubViewLayout];
 }
@@ -76,7 +78,7 @@
     [self.PMLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.dateLabel.mas_bottom).mas_offset(FitSize(7));
         make.left.mas_equalTo(self.line.mas_right).mas_offset(FitSize(10));
-        make.width.mas_equalTo(FitSize(200));
+        make.width.mas_equalTo(FitSize(50));
         make.height.mas_equalTo(FitSize(10));
     }];
     
@@ -93,6 +95,13 @@
         make.width.mas_equalTo(FitSize(20));
         make.height.mas_equalTo(FitSize(18));
     }];
+    
+    [self.carLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.dateLabel.mas_bottom).mas_offset(FitSize(7));
+        make.left.mas_equalTo(self.PMLabel.mas_right).mas_offset(FitSize(10));
+        make.width.mas_equalTo(FitSize(100));
+        make.height.mas_equalTo(FitSize(10));
+    }];
 }
 
 
@@ -104,8 +113,10 @@
     NSString *weather = [NSString stringWithFormat:@"%@ %@/%@°C", model.dayTxt,model.minW,model.maxW];
     self.weatherLabel.text = weather;
     
-    NSString *pmText = [NSString stringWithFormat:@"PM %@   限行尾号 %@", model.pmten,  model.carNoLimit];
+    NSString *pmText = [NSString stringWithFormat:@"PM %@", model.pmten];
+    NSString *carText = [NSString stringWithFormat:@"限行尾号 %@", model.carNoLimit];
     self.PMLabel.attributedText = [self getAttributedStringWithString:pmText];
+    self.carLabel.attributedText = [self getCarAttributeStringWithString:carText];
     
     NSString *currentDate = [PublicFunction getCurrentDate];
     NSString *chineseDate = [PublicFunction getChineseCalendarWithDate:currentDate];
@@ -116,8 +127,14 @@
 - (NSAttributedString *)getAttributedStringWithString:(NSString *)text {
     NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:text];
     NSInteger length = text.length;
-    [attrStr addAttribute:NSForegroundColorAttributeName value:APP_THEME_COLOR range:NSMakeRange(2, 3)];
-    [attrStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(length-3, 3)];
+    [attrStr addAttribute:NSForegroundColorAttributeName value:APP_THEME_COLOR range:NSMakeRange(2, length-2)];
+    return attrStr;
+}
+
+- (NSAttributedString *)getCarAttributeStringWithString:(NSString *)text {
+    NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:text];
+    NSInteger length = text.length;
+    [attrStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(5, length-5)];
     return attrStr;
 }
 
@@ -169,6 +186,14 @@
         _PMLabel.attributedText = attrStr;
     }
     return _PMLabel;
+}
+
+- (UILabel *)carLabel {
+    if (!_carLabel) {
+        _carLabel = [[UILabel alloc] init];
+        _carLabel.font = [UIFont systemFontOfSize:FitSize(13)];
+    }
+    return _carLabel;
 }
 
 - (UIImageView *)weatherImage {
